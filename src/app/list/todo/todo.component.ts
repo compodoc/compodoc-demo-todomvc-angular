@@ -7,9 +7,12 @@ import { Todo } from '../../models/todo.model';
     templateUrl: './todo.component.html'
 })
 export class TodoComponent {
+    /**
+     * The entry todo from the parent list
+     */
     @Input() todo: Todo;
 
     constructor() {
-        console.log('TodoComponent: ', this.todo);
+        
     }
 }

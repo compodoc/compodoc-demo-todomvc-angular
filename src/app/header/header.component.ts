@@ -8,9 +8,19 @@ import { TodoStore } from '../services/todo.store';
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-    title = 'todos';
+    /**
+     * Application main title
+     */
+    title: string = 'todos';
 
+    /**
+     * Local reference of TodoStore
+     */
     todoStore: TodoStore;
+
+    /**
+     * The data-binding value of the input tag, added on enter to the todo store
+     */
     @Input() newTodoText: string = '';
 
     constructor(todoStore: TodoStore) {

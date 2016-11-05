@@ -8,6 +8,9 @@ import { TodoStore } from '../services/todo.store';
     templateUrl: './list.component.html'
 })
 export class ListComponent {
+    /**
+     * Local reference of TodoStore
+     */
     todoStore: TodoStore;
 
     constructor(todoStore: TodoStore) {
