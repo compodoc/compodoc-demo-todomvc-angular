@@ -1,5 +1,6 @@
 <input class="toggle-all" type="checkbox">
-<ul class="todo-list">
-    <todo></todo>
-    <todo></todo>
-</ul>
+<div *ngIf="todoStore.todos.length > 0">
+    <ul class="todo-list" >
+        <todo *ngFor="let todo of todoStore.todos" [todo]='todo'></todo>
+    </ul>
+</div>
