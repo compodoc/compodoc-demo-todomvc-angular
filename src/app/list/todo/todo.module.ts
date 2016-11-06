@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { TodoComponent } from './todo.component';
 
+import { FirstUpperPipe } from '../../pipes/first-upper.pipe';
+
 @NgModule({
     imports: [
         BrowserModule
     ],
     declarations: [
-        TodoComponent
+        TodoComponent,
+        FirstUpperPipe
     ],
     exports: [TodoComponent]
 })
