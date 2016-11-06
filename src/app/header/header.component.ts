@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 
 import { TodoStore } from '../shared/services/todo.store';
 
+/**
+ * The header component
+ */
 @Component({
     selector: 'header',
     providers: [TodoStore],

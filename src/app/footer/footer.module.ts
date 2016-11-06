@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FooterComponent } from './footer.component';
 
+/**
+ * The footer module
+ */
 @NgModule({
     imports: [
         BrowserModule

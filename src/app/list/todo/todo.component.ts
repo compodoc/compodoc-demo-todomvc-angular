@@ -4,6 +4,9 @@ import { Todo } from '../../shared/models/todo.model';
 
 import { TodoStore } from '../../shared/services/todo.store';
 
+/**
+ * The todo component
+ */
 @Component({
     selector: 'todo',
     templateUrl: './todo.component.html'

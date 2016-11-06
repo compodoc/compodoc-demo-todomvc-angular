@@ -1,3 +1,6 @@
+/**
+ * The todo class
+ */
 export class Todo {
     completed: Boolean;
     editing: Boolean;

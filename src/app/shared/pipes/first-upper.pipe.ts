@@ -1,13 +1,13 @@
 import { PipeTransform, Pipe } from '@angular/core';
 
-/*
+/**
  * Uppercase the first letter of the string
  * Usage:
  *   value | firstUpper:exponent
  * Example:
  *   {{ car |  firstUpper}}
  *   formats to: Car
-*/
+ */
 @Pipe({
     name: 'firstUpper'
 })

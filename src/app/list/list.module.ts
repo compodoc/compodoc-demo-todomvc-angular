@@ -5,6 +5,9 @@ import { ListComponent } from './list.component';
 
 import { TodoModule } from './todo/';
 
+/**
+ * The list of todos module
+ */
 @NgModule({
     imports: [
         TodoModule,

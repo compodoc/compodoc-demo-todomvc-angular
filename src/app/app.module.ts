@@ -11,6 +11,9 @@ import { FooterModule } from './footer/';
 
 import { AppComponent } from './app.component';
 
+/**
+ * The bootstrapper module
+ */
 @NgModule({
     declarations: [
         AppComponent

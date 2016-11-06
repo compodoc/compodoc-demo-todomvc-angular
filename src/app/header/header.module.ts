@@ -3,6 +3,9 @@ import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header.component';
 
+/**
+ * The header module
+ */
 @NgModule({
     imports: [
         FormsModule

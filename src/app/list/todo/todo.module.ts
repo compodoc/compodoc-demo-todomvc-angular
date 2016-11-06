@@ -7,6 +7,9 @@ import { FirstUpperPipe } from '../../shared/pipes/first-upper.pipe';
 
 import { DoNothingDirective } from '../../shared/directives/do-nothing.directive';
 
+/**
+ * The todo module
+ */
 @NgModule({
     imports: [
         BrowserModule

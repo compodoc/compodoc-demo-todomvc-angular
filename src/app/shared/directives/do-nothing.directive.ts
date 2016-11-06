@@ -1,5 +1,8 @@
 import { Directive } from '@angular/core';
 
+/**
+ * This directive does nothing !
+ */
 @Directive({
     selector: '[donothing]'
 })

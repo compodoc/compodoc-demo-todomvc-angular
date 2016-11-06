@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { Todo } from '../models/todo.model';
 
+/**
+ * This service is a todo store
+ */
 @Injectable()
 export class TodoStore {
     /**
