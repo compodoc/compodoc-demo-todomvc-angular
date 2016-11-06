@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
-import { Todo } from '../../models/todo.model';
+import { Todo } from '../../shared/models/todo.model';
 
-import { TodoStore } from '../../services/todo.store';
+import { TodoStore } from '../../shared/services/todo.store';
 
 @Component({
     selector: 'todo',

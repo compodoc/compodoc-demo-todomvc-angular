@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { TodoComponent } from './todo.component';
 
-import { FirstUpperPipe } from '../../pipes/first-upper.pipe';
+import { FirstUpperPipe } from '../../shared/pipes/first-upper.pipe';
+
+import { DoNothingDirective } from '../../shared/directives/do-nothing.directive';
 
 @NgModule({
     imports: [
@@ -11,7 +13,8 @@ import { FirstUpperPipe } from '../../pipes/first-upper.pipe';
     ],
     declarations: [
         TodoComponent,
-        FirstUpperPipe
+        FirstUpperPipe,
+        DoNothingDirective
     ],
     exports: [TodoComponent]
 })

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { TodoStore } from '../services/todo.store';
+import { TodoStore } from '../shared/services/todo.store';
 
 @Component({
     selector: 'list',
