@@ -4,12 +4,6 @@ GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -p -e "require('./package.json').repos
 
 cd documentation && \
 
-sed -i 's/base href="\/"/base href="https:\/\/compodoc.github.io\/compodoc-demo-todomvc-angular2\/"/g' index.html && \
-
-#sed -i 's/base/toto/g' index.html && \
-
-cat index.html && \
-
 rm -R .git
 git init && \
 
