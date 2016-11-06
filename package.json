@@ -10,7 +10,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/compodoc/compodoc-demo-todomvc-angular2.git"
+    "url": "https://github.com/compodoc/compodoc-demo-todomvc-angular2.git"
   },
   "dependencies": {
     "@angular/common": "~2.1.0",
