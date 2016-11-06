@@ -8,6 +8,10 @@
     "doc": "./node_modules/.bin/compodoc -f src/tsconfig.json"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compodoc/compodoc-demo-todomvc-angular2.git"
+  },
   "dependencies": {
     "@angular/common": "~2.1.0",
     "@angular/compiler": "~2.1.0",
