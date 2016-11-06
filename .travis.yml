@@ -8,6 +8,7 @@ install:
     - npm install
 script:
     - npm run doc
+    - bash ./deploy.sh
 env:
   global:
     - secure: >-
