@@ -81,6 +81,13 @@ export class TodoStore {
     }
 
     /**
+     *  Update store
+     */
+    update() {
+        this.updateStore();
+    }
+
+    /**
      *  Add todo
      */
     add(title: String) {

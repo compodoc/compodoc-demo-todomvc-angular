@@ -30,4 +30,30 @@ export class TodoComponent {
     toggleCompletion(todo: Todo) {
 		this.todoStore.toggleCompletion(todo);
 	}
+
+    editTodo(todo: Todo) {
+		todo.editing = true;
+	}
+
+    stopEditing(todo: Todo, editedTitle: string) {
+		todo.title = editedTitle;
+		todo.editing = false;
+	}
+
+	cancelEditingTodo(todo: Todo) {
+		todo.editing = false;
+	}
+
+	updateEditingTodo(todo: Todo, editedTitle: string) {
+		editedTitle = editedTitle.trim();
+		todo.editing = false;
+
+		if (editedTitle.length === 0) {
+			return this.todoStore.remove(todo);
+		}
+
+		todo.title = editedTitle;
+
+        this.todoStore.update();
+	}
 }
