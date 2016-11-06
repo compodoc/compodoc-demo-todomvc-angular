@@ -4,7 +4,8 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve"
+    "start": "ng serve",
+    "doc": "./node_modules/.bin/compodoc -f src/tsconfig.json"
   },
   "private": true,
   "dependencies": {
@@ -16,6 +17,7 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
+    "compodoc": "https://github.com/compodoc/compodoc/tarball/master",
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "todomvc-app-css": "^2.0.6",

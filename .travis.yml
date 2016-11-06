@@ -1,0 +1,14 @@
+language: node_js
+branches:
+  only:
+    - develop
+node_js:
+    - "6"
+install:
+    - npm install
+script:
+    - npm run doc
+env:
+  global:
+    - secure: >-
+        cfPkUdwR9XdKNntMAgdEPg3CJsyFBQ3EutjZEoR2Yhi8eg7t8A+2K65uFs8O6I/vHj0VnNGNWPYyvP1XXMOihWtecjDMEfRF+hf4rksPQ0vLw8vaqHvK5fuvc5/q2Vt7FemE1n6vumSImdBWZ/pXON8OYtXWD7KWEOYZyC/ZY7arzPB8lsf7ckZrG47rTC2M/OOf8CpqINZYfwoNllA+V9zqGIXZ+VJX1KiYSgomV9omcUetoydmy+vDIbAg9PVSdKt6aDtMZzRrYCl2siXbaQ2BOzOfTf7IYNOkoE+kUjJT+aAiLuuro4x5dNiqQvMY1d96Nr+0nCLqdg6kXxiTXOUSWDGgDi71zfofDW3KRVo3/69ouidE57hVdja3DGSnImmo4xX/4EUEY8ThIY8A7kLArXUimSUNX9VQ0RR99xpeXTrk0IxcDMkG/Yt1LdqekVQlY/AppP1uV8T5+QcfcnAZeiu91K1nzU8FY8u34YWStAONj9X7qKLi7MhRfIXaveOGtD5o5s5bOvuoh9/ov8tx10USw08p2oiP5+jEAAokfZ35giAY6Rw1vUl5aYNugmPjU84xivEn2xh8iNhM1YwgPnZ5+TDF8I5q3KxvDY6Tf93dG1Eag7bRdncaXCRthU0QFnwRXeVJmQnIIvhsOGmzyd+PTBTLJhQXbp6qfag=
