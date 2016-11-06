@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e
-'process.stdout.write(require("./package.json").repository.url)')}
+GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -p -e "require('./package.json').repository.url")}
 
 cd documentation && \
 
