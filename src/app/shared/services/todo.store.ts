@@ -31,7 +31,7 @@ export class TodoStore {
     }
 
     /**
-     *  All the todos are they completed ?
+     *  All the todos are they __completed__ ?
      */
     allCompleted(): boolean {
         return this.todos.length === this.getCompleted().length;
