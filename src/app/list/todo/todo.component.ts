@@ -26,4 +26,8 @@ export class TodoComponent {
     remove(todo: Todo){
 		this.todoStore.remove(todo);
 	}
+
+    toggleCompletion(todo: Todo) {
+		this.todoStore.toggleCompletion(todo);
+	}
 }
