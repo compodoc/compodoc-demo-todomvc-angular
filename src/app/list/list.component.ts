@@ -7,7 +7,7 @@ import { TodoStore } from '../shared/services/todo.store';
  */
 @Component({
     selector: 'list',
-    providers: [TodoStore],
+    providers: [],
     templateUrl: './list.component.html'
 })
 export class ListComponent {

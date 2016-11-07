@@ -11,6 +11,8 @@ import { FooterModule } from './footer/';
 
 import { AppComponent } from './app.component';
 
+import { TodoStore } from './shared/services/todo.store';
+
 /**
  * The bootstrapper module
  */
@@ -27,7 +29,9 @@ import { AppComponent } from './app.component';
         ListModule,
         FooterModule
     ],
-    providers: [],
+    providers: [
+        TodoStore
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

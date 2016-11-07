@@ -7,7 +7,6 @@ import { TodoStore } from '../shared/services/todo.store';
  */
 @Component({
     selector: 'header',
-    providers: [TodoStore],
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
