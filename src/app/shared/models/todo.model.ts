@@ -2,9 +2,18 @@
  * The todo class
  */
 export class Todo {
+    /**
+     * Completed status
+     */
     completed: Boolean;
+    /**
+     * Editing status
+     */
     editing: Boolean;
 
+    /**
+     * Title
+     */
     private _title: String;
     get title() {
         return this._title;
@@ -17,5 +26,12 @@ export class Todo {
         this.completed = false;
         this.editing = false;
         this.title = title.trim();
+    }
+
+    /**
+     *  fakeMethod !!
+     */
+    fakeMethod(): boolean {
+        return true;
     }
 }
