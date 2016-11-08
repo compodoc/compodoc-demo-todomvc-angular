@@ -9,3 +9,10 @@ app-root {
 .todoapp {
     text-align: left;
 }
+
+.info {
+    margin: 0 auto 0 !important;
+}
+.links {
+    margin: 65px auto 0 !important;
+}
