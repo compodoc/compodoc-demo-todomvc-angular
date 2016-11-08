@@ -7,7 +7,7 @@ import { TodoStore } from '../shared/services/todo.store';
  */
 @Component({
     selector: 'footer',
-    providers: [TodoStore],
+    providers: [],
     templateUrl: './footer.component.html'
 })
 export class FooterComponent {
