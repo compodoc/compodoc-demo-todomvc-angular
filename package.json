@@ -5,7 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
-    "doc": "./node_modules/.bin/compodoc -f src/tsconfig.json -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
+    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
   },
   "private": true,
   "repository": {
@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
-    "compodoc": "^0.0.4",
+    "compodoc": "^0.0.7",
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "todomvc-app-css": "^2.0.6",
