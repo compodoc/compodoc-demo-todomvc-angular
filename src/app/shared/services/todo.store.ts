@@ -61,6 +61,13 @@ export class TodoStore {
     }
 
     /**
+     *  Get all todos
+     */
+    getAll() {
+        return this.todos;
+    }
+
+    /**
      *  Get completed todos
      */
     getCompleted() {
