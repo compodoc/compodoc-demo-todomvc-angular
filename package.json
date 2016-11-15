@@ -7,7 +7,6 @@
     "start": "ng serve",
     "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
   },
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/compodoc/compodoc-demo-todomvc-angular2.git"
