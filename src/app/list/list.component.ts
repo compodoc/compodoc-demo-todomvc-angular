@@ -26,24 +26,20 @@ export class ListComponent {
     constructor(todoStore: TodoStore) {
         let that = this;
 		this.todoStore = todoStore;
-        this.todos = todoStore.getAll();
-        this.watchTest = Observable.of(todoStore.todos);
+        //this.todos = todoStore.getAll();
         EmitterService.get('FooterComponent').subscribe((value) => {
             console.log(value);
             switch (value) {
                 case 'displayCompleted':
-                    that.todos = todoStore.getCompleted();
+                    //that.todos = todoStore.getCompleted();
                     break;
                 case 'displayAll':
-                    that.todos = todoStore.getAll();
+                    //that.todos = todoStore.getAll();
                     break;
                 case 'displayRemaining':
-                    that.todos = todoStore.getRemaining();
+                    //that.todos = todoStore.getRemaining();
                     break;
             }
-        });
-        this.watchTest.subscribe(data => {
-            console.log(data);
         });
 	}
 }
