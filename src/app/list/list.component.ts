@@ -20,12 +20,18 @@ export class ListComponent {
      * Local reference of TodoStore
      */
     todoStore: TodoStore;
-    todos: Array<Todo>;
-    watchTest;
+    todos: any = [];
 
     constructor(todoStore: TodoStore) {
         let that = this;
 		this.todoStore = todoStore;
+
+        this.todoStore.todos
+            .subscribe((data) => {
+                console.log(data);
+                this.todos = data;
+            });
+
         //this.todos = todoStore.getAll();
         EmitterService.get('FooterComponent').subscribe((value) => {
             console.log(value);

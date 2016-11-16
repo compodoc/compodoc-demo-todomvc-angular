@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.0-rc.3/Rx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+    <script>
+        var data = [1, 2, 3],
+
+            updates = new Rx.Subject(),
+            numbers = new Rx.ReplaySubject(1),
+            addNumber = new Rx.Subject(),
+            removeNumber = new Rx.Subject();
+
+        updates
+            .scan((accumulator, operation) => {
+                return operation(accumulator);
+            }, data)
+            .subscribe(numbers);
+
+        addNumber
+            .map((number) => {
+                return (state) => {
+                    return state.concat(number);
+                }
+            })
+            .subscribe(updates);
+
+        removeNumber
+            .map((number) => {
+                return (state) => {
+                    return state.filter((numbers) => {
+                        return numbers !== number;
+                    })
+                }
+            })
+            .subscribe(updates);
+
+        numbers.subscribe((value) => {
+            console.log(value)
+        });
+
+        var add = function(number) {
+                addNumber.next(number);
+            },
+
+            remove = function(number) {
+                removeNumber.next(number);
+            };
+
+        setTimeout(function() {
+            add(4);
+            setTimeout(function() {
+                remove(1);
+            }, 1000);
+        }, 500);
+    </script>
+</body>
+
+</html>

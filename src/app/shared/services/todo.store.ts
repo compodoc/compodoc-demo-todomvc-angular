@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Subject, ReplaySubject } from 'rxjs';
 
 import { Todo } from '../models/todo.model';
 
@@ -12,35 +12,30 @@ export class TodoStore {
     /**
      *  Local array of Todos
      */
-    todos: any;
+    initialTodos: any[] = [];
+
+    todos = new ReplaySubject(1);
+    updates = new Subject();
+    addTodo = new Subject();
 
     constructor() {
         let persistedTodos = JSON.parse(localStorage.getItem('angular2-todos') || '[]');
         console.log(persistedTodos);
 
-        this.todos = new Subject();
+        this.updates
+            .scan((accumulator: Object[], operation: Function) => {
+                return operation(accumulator);
+            }, this.initialTodos)
+            .subscribe(this.todos);
 
-        this.todos.subscribe(
-            function (x) {
-                console.log('Next: ', x);
-            },
-            function (err) {
-                console.log('Error: ' + err);
-            },
-            function () {
-                console.log('Completed');
-            }
-        );
+        this.addTodo
+            .map((todo) => {
+                return (state) => {
+                    return state.concat(todo);
+                }
+            })
+            .subscribe(this.updates);
 
-        this.todos.next(new Todo('test'));
-
-        /*this.todos = new Observable<Todo[]>(observer => {
-            observer.next(new Todo('test'));
-        });
-        let subscription = this.todos.subscribe(value => {
-              console.log(value);
-        });
-        this.todos.next(persistedTodos);*/
         /*// Normalize back into classes
         this.todos = persistedTodos.map((todo: { _title: String, completed: Boolean }) => {
             let ret = new Todo(todo._title);
@@ -131,5 +126,6 @@ export class TodoStore {
         //this.todos.next(this.todos.getValue().push(new Todo(title)));
         //this.todos.push(new Todo(title));
         //this.updateStore();
+        this.addTodo.next(new Todo(title));
     }
 }
