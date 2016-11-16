@@ -22,6 +22,10 @@ export class Todo {
         this._title = value.trim();
     }
 
+    static classMethod() {
+        return 'hello';
+    }
+
     constructor(title: String) {
         this.completed = false;
         this.editing = false;
