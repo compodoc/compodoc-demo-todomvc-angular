@@ -16,6 +16,7 @@ interface LabelledTodo {
 
 /**
  * A function type interface just for documentation purpose
+ * ```
  * let mySearch: SearchFunc;
  * mySearch = function(source: string, subString: string) {
  *     let result = source.search(subString);
@@ -26,6 +27,7 @@ interface LabelledTodo {
  *         return true;
  *     }
  * }
+ * ```
  */
 interface SearchFunc {
     (source: string, subString: string): boolean;
@@ -33,8 +35,10 @@ interface SearchFunc {
 
 /**
  * A indexable interface just for documentation purpose
+ * ```
  * let myArray: StringArray;
  * myArray = ["Bob", "Fred"];
+ * ```
  */
 interface StringArray {
     [index: number]: string;
@@ -42,10 +46,12 @@ interface StringArray {
 
 /**
  * A class interface just for documentation purpose
+ * ```
  * class Clock implements ClockInterface {
  *     currentTime: Date;
  *     constructor(h: number, m: number) { }
  * }
+ * ```
  */
 interface ClockInterface {
     currentTime: Date;
