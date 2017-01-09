@@ -14,11 +14,11 @@ export class Todo {
     /**
      * Title
      */
-    private _title: String;
+    private _title: string;
     get title() {
         return this._title;
     }
-    set title(value: String) {
+    set title(value: string) {
         this._title = value.trim();
     }
 
@@ -26,7 +26,7 @@ export class Todo {
         return 'hello';
     }
 
-    constructor(title: String) {
+    constructor(title: string) {
         this.completed = false;
         this.editing = false;
         this.title = title.trim();
