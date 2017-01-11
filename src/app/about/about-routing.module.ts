@@ -5,7 +5,7 @@ import { AboutComponent } from './about.component';
 import { TodoMVCComponent } from './todomvc/todomvc.component';
 import { CompodocComponent } from './compodoc/compodoc.component';
 
-const APP_ROUTES: Routes = [
+const ABOUT_ROUTES: Routes = [
     {
         path: '', component: AboutComponent,
         children: [
@@ -17,7 +17,7 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(APP_ROUTES)],
+    imports: [RouterModule.forChild(ABOUT_ROUTES)],
     exports: [RouterModule],
     declarations: [
         TodoMVCComponent,
