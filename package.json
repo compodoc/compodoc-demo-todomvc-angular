@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
+    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -a screenshots -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
   },
   "repository": {
     "type": "git",
