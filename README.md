@@ -24,3 +24,13 @@ function hello() {
     console.log('hello world !');
 }
 ```
+
+## Screenshots of the application - (for assets embedding demo)
+
+### Home
+
+![Screenshot-1](screenshots/home.png)
+
+### About
+
+![Screenshot-2](screenshots/about.png)
