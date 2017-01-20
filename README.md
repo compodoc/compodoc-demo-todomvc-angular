@@ -2,6 +2,13 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
+It is a demo project for demonstrating Compodoc features :
+
+* architecture
+* components documentation
+* embedding images
+* documentating methods and properties of components, classes, interfaces, etc...
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -27,10 +34,6 @@ function hello() {
 
 ## Screenshots of the application - (for assets embedding demo)
 
-### Home
-
-![Screenshot-1](screenshots/home.png)
-
-### About
-
-![Screenshot-2](screenshots/about.png)
+Home page | About page
+--- | ---
+![Screenshot-1](screenshots/home.png) | ![Screenshot-2](screenshots/about.png)

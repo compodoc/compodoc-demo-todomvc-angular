@@ -16,6 +16,12 @@ const ABOUT_ROUTES: Routes = [
     }
 ];
 
+/**
+ * About Routing module
+ *
+ * Exposing just two routes, one for Compodoc, the other one for TodoMVC
+ */
+
 @NgModule({
     imports: [RouterModule.forChild(ABOUT_ROUTES)],
     exports: [RouterModule],

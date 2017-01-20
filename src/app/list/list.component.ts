@@ -9,6 +9,14 @@ import { Todo } from '../shared/models/todo.model';
 
 /**
  * The list of todos component
+ *
+ * Can filter types of todos :
+ *
+ * | Type | API |
+ * | --- | --- |
+ * | completed | displayCompleted |
+ * | all | displayAll |
+ * | remaining | displayRemaining |
  */
 @Component({
     selector: 'list',

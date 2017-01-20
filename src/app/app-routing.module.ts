@@ -7,6 +7,11 @@ export const APP_ROUTES: Routes = [
     { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
+/**
+ * Main module routing
+ *
+ * Link to about module with lazy-loading, and instead to home component
+ */
 @NgModule({
   imports: [RouterModule.forRoot(APP_ROUTES)],
   exports: [RouterModule]

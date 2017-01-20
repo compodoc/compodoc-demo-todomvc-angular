@@ -5,7 +5,9 @@ import { AboutComponent } from './about.component';
 import { AboutRoutingModule }    from './about-routing.module';
 
 /**
- * The header module
+ * The about module
+ * 
+ * Just embedding <about> component and it's routing definition in AboutRoutingModule
  */
 @NgModule({
     declarations: [
