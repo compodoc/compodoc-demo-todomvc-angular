@@ -33,7 +33,7 @@
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.24",
     "codelyzer": "~2.0.0-beta.1",
-    "compodoc": "^0.0.35",
+    "compodoc": "^0.0.36",
     "ts-node": "1.2.1",
     "typescript": "~2.0.3"
   }
