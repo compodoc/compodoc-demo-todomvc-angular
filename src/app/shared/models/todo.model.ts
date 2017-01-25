@@ -35,7 +35,7 @@ export class Todo {
 
     /**
      *  fakeMethod !!
-     *  @example <caption>Example usage of fakeMethod</caption>
+     *  @example <caption>Usage of fakeMethod</caption>
      *  returns true;
      *  fakeMethod()
      */
