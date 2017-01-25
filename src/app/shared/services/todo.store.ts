@@ -41,7 +41,16 @@ export class TodoStore {
     }
 
     /**
-     *  Set all todos status (completed or not)
+     * Set all todos status (completed or not)
+     *
+     * @example
+     * // set all at completed
+     * TodoStore.setAllTo(true);
+     *
+     * @example
+     * // set all at not completed
+     * TodoStore.setAllTo(false);
+     *
      * @param {boolean} completed Status of all todos
      */
     setAllTo(completed: boolean) {
