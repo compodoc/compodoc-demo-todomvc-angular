@@ -12,6 +12,8 @@ import { FooterModule } from '../footer/';
 
 /**
  * The header module
+ *
+ * Just embedding <home> component and it's routing definition in {@link HomeRoutingModule}
  */
 @NgModule({
     declarations: [

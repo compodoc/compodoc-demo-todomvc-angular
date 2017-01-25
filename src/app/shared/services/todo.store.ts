@@ -4,11 +4,13 @@ import { Todo } from '../models/todo.model';
 
 /**
  * This service is a todo store
+ * See {@link Todo} for details about the main data of this store
  */
 @Injectable()
 export class TodoStore {
     /**
      *  Local array of Todos
+     *  See {@link Todo}
      */
     todos: Array<Todo>;
 
@@ -89,7 +91,8 @@ export class TodoStore {
     }
 
     /**
-     *  Remove todo
+     * Remove todo
+     * See {@link Todo}
      * @param {Todo} todo Todo to remove
      */
     remove(todo: Todo) {
