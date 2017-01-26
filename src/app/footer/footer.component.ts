@@ -26,6 +26,11 @@ export class FooterComponent {
      */
     currentFilter: string = 'all';
 
+    /**
+     * The "constructor"
+     *
+     * @param {TodoStore} todoStore A TodoStore
+     */
     constructor(todoStore: TodoStore) {
 		this.todoStore = todoStore;
 	}
