@@ -1,16 +1,16 @@
 {
-  "name": "todomvc-angular2",
+  "name": "todomvc-angular",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -a screenshots -b https://compodoc.github.io/compodoc-demo-todomvc-angular2/ -n 'TodoMVC Angular 2 documentation'"
+    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.json -a screenshots -b https://compodoc.github.io/compodoc-demo-todomvc-angular/ -n 'TodoMVC Angular 2 documentation'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/compodoc/compodoc-demo-todomvc-angular2.git"
+    "url": "https://github.com/compodoc/compodoc-demo-todomvc-angular.git"
   },
   "dependencies": {
     "@angular/common": "^2.3.1",
@@ -33,7 +33,7 @@
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.24",
     "codelyzer": "~2.0.0-beta.1",
-    "compodoc": "^0.0.37",
+    "compodoc": "^0.0.38",
     "ts-node": "1.2.1",
     "typescript": "~2.0.3"
   }
