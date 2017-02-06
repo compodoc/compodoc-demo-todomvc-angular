@@ -35,6 +35,7 @@
     "codelyzer": "~2.0.0-beta.1",
     "compodoc": "^0.0.39",
     "ts-node": "1.2.1",
+    "tslint": "^4.4.2",
     "typescript": "~2.0.3"
   }
 }
