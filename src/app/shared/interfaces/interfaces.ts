@@ -10,7 +10,7 @@ interface LabelledTodo {
 
 /**
  * A function type interface just for documentation purpose
- * ```
+ * ```typescript
  * let mySearch: SearchFunc;
  * mySearch = function(source: string, subString: string) {
  *     let result = source.search(subString);
@@ -29,7 +29,7 @@ interface SearchFunc {
 
 /**
  * A indexable interface just for documentation purpose
- * ```
+ * ```typescript
  * let myArray: StringArray;
  * myArray = ["Bob", "Fred"];
  * ```
@@ -40,7 +40,7 @@ interface StringArray {
 
 /**
  * A class interface just for documentation purpose
- * ```
+ * ```typescript
  * class Clock implements ClockInterface {
  *     currentTime: Date;
  *     constructor(h: number, m: number) { }
