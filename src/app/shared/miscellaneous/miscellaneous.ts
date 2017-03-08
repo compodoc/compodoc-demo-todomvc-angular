@@ -19,7 +19,7 @@ export class StringIndexedItems<T> {
   [index: string]: T;
 }
 
-export interface TOTsdosds<T> {
+export interface InterfaceWithIndexable<T> {
   [yala: string]: T;
 }
 
