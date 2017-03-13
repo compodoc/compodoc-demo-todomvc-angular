@@ -6,6 +6,13 @@ export const PI:number = 3.14;
 
 export let PIT = 4;
 
+export type Something = number | string;
+
+export type Flags = {
+    option1: boolean;
+    option2: boolean;
+}
+
 /**
  * A foo bar function
  *
@@ -23,14 +30,6 @@ export interface InterfaceWithIndexable<T> {
   [yala: string]: T;
 }
 
-/*
-export type Something = number | string;
-
-export type Flags = {
-    option1: boolean;
-    option2: boolean;
-}
-
 export enum Direction {
     Up,
     Down,
@@ -38,5 +37,6 @@ export enum Direction {
     Right
 }
 
+/*
 export let yo:{ [index:string] : {message: string} } = {};
 */
