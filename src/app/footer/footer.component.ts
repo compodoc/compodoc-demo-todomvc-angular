@@ -10,7 +10,23 @@ import { EmitterService } from '../shared/services/emitter.service';
 @Component({
     selector: 'footer',
     providers: [],
-    templateUrl: './footer.component.html'
+    template: `
+    <div class="footer" *ngIf="todoStore.todos.length > 0">
+        <span class="todo-count"><strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? 'item' : 'items'}} left</span>
+        <ul class="filters">
+    		<li>
+    			<a class="selected btn-filter" [class.selected]="currentFilter === 'all'"  (click)="displayAll()">All</a>
+    		</li>
+    		<li>
+    			<a class="btn-filter" [class.selected]="currentFilter === 'remaining'" (click)="displayRemaining()">Active</a>
+    		</li>
+    		<li>
+    			<a class="btn-filter"  [class.selected]="currentFilter === 'completed'" (click)="displayCompleted()">Completed</a>
+    		</li>
+    	</ul>
+        <button class="clear-completed" *ngIf="todoStore.getCompleted().length > 0" (click)="removeCompleted()">Clear completed</button>
+    </div>
+`
 })
 export class FooterComponent {
     /**
