@@ -4,12 +4,24 @@
         "file": "introduction.md"
     },
     {
-        "title": "Edition",
-        "file": "edition.md",
+        "title": "Actions",
+        "file": "actions.md",
         "children": [
             {
+                "title": "Creation of a todo",
+                "file": "actions/creation.md"
+            },
+            {
                 "title": "Edition of a todo",
-                "file": "edition/edition.md"
+                "file": "actions/edition.md"
+            },
+            {
+                "title": "Delete a todo",
+                "file": "actions/delete.md"
+            },
+            {
+                "title": "Update the status of a todo",
+                "file": "actions/status.md"
             }
         ]
     }
