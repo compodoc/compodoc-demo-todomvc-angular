@@ -1,3 +1,5 @@
+import { superString } from '../interfaces/interfaces';
+
 /**
  * The todo class
  * See {@link TodoStore} for service using it
@@ -11,6 +13,11 @@ export class Todo {
      * Editing status
      */
     editing: Boolean;
+
+    /**
+     * Just for Compodoc feature demo
+     */
+    oneProperty: superString;
 
     /**
      * Title

@@ -1,4 +1,11 @@
 /**
+ * Just for Compodoc feature demo
+ */
+export interface superString {
+    name: string;
+}
+
+/**
  * An interface just for documentation purpose
  */
 interface LabelledTodo {
