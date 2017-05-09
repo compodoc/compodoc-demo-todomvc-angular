@@ -15,5 +15,8 @@
         "typeRoots": [
             "../node_modules/@types"
         ]
-    }
+    },
+    "exclude": [
+        "app/file-to-exclude.ts"
+    ]
 }
