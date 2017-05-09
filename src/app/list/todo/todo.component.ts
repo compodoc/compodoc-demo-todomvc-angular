@@ -6,6 +6,11 @@ import { TodoStore } from '../../shared/services/todo.store';
 
 /**
  * The todo component
+ * ```html
+ * <todo>
+ *    [todo]="todo"
+ * </todo>
+ * ```
  */
 @Component({
     selector: 'todo',
