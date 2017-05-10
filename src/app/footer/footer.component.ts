@@ -4,6 +4,8 @@ import { TodoStore } from '../shared/services/todo.store';
 
 import { EmitterService } from '../shared/services/emitter.service';
 
+import { LogMethod, LogProperty, LogPropertyWithArgs, LogClass } from '../shared/decorators/log.decorator';
+
 /**
  * The footer component
  */
@@ -28,6 +30,7 @@ import { EmitterService } from '../shared/services/emitter.service';
     </div>
 `
 })
+@LogClass
 export class FooterComponent {
     /**
      * Local reference of TodoStore
@@ -36,10 +39,12 @@ export class FooterComponent {
     /**
      * Local id for EmitterService
      */
+    @LogProperty
     id: string = 'FooterComponent';
     /**
      * Starting filter param
      */
+    @LogPropertyWithArgs('theCurrentFilter')
     currentFilter: string = 'all';
 
     /**
@@ -54,6 +59,7 @@ export class FooterComponent {
     /**
      * Removes all the completed todos
      */
+    @LogMethod
     removeCompleted() {
 		this.todoStore.removeCompleted();
 	}
