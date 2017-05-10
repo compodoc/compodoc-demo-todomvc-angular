@@ -9,6 +9,7 @@ import { LogMethod, LogProperty, LogPropertyWithArgs, LogClass } from '../shared
 /**
  * The footer component
  */
+@LogClass
 @Component({
     selector: 'footer',
     providers: [],
@@ -30,7 +31,6 @@ import { LogMethod, LogProperty, LogPropertyWithArgs, LogClass } from '../shared
     </div>
 `
 })
-@LogClass
 export class FooterComponent {
     /**
      * Local reference of TodoStore
