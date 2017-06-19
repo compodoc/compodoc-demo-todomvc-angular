@@ -2,8 +2,10 @@ import { PipeTransform, Pipe } from '@angular/core';
 
 /**
  * Uppercase the first letter of the string
+ *
  * __Usage :__
  *   value | firstUpper:exponent
+ *   
  * __Example :__
  *   {{ car |  firstUpper}}
  *   formats to: Car

@@ -2,6 +2,7 @@ import { superString } from '../interfaces/interfaces';
 
 /**
  * The todo class
+ *
  * See {@link TodoStore} for service using it
  */
 export class Todo {
@@ -42,8 +43,11 @@ export class Todo {
 
     /**
      *  fakeMethod !!
+     *
      *  @example <caption>Usage of fakeMethod</caption>
+     *
      *  returns true;
+     *  
      *  fakeMethod()
      */
     fakeMethod(): boolean {

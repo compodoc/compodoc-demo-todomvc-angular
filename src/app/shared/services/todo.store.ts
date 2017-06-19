@@ -4,12 +4,14 @@ import { Todo } from '../models/todo.model';
 
 /**
  * This service is a todo store
+ *
  * See {@link Todo} for details about the main data of this store
  */
 @Injectable()
 export class TodoStore {
     /**
      *  Local array of Todos
+     *
      *  See {@link Todo}
      */
     todos: Array<Todo>;
@@ -33,7 +35,8 @@ export class TodoStore {
     }
 
     /**
-     *  All the todos are they __completed__ ?
+     * All the todos are they __completed__ ?
+     *
      * @returns {boolean} All completed ?
      */
     allCompleted(): boolean {
@@ -59,7 +62,7 @@ export class TodoStore {
     }
 
     /**
-     *  Remove completed todos
+     * Remove completed todos
      */
     removeCompleted() {
         this.todos = this.getWithCompleted(false);
@@ -67,7 +70,8 @@ export class TodoStore {
     }
 
     /**
-     *  Get remaining todos
+     * Get remaining todos
+     *
      * @returns {Array} All remaining todos
      */
     getRemaining() {
@@ -75,7 +79,8 @@ export class TodoStore {
     }
 
     /**
-     *  Get all todos
+     * Get all todos
+     *
      * @returns {Array} All todos
      */
     getAll() {
@@ -83,7 +88,8 @@ export class TodoStore {
     }
 
     /**
-     *  Get completed todos
+     * Get completed todos
+     *
      * @returns {Array} All completed todos
      */
     getCompleted() {
@@ -91,7 +97,8 @@ export class TodoStore {
     }
 
     /**
-     *  Toggle completed todo status
+     * Toggle completed todo status
+     *
      * @param {Todo} todo Todo which change status
      */
     toggleCompletion(todo: Todo) {
@@ -101,7 +108,9 @@ export class TodoStore {
 
     /**
      * Remove todo
+     *
      * See {@link Todo}
+     *
      * @param {Todo} todo Todo to remove
      */
     remove(todo: Todo) {
@@ -117,7 +126,8 @@ export class TodoStore {
     }
 
     /**
-     *  Add todo
+     * Add todo
+     * 
      * @param {string} title Title of todo
      */
     add(title: string) {
