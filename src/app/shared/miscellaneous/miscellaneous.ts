@@ -4,10 +4,18 @@
  */
 export const PI:number = 3.14;
 
-export let PIT = 4;
+/**
+ * PIT let
+ * See {@link Todo} for service using it
+ */
+export let PIT:number = 4;
 
 export type Something = number | string;
 
+
+/**
+ * Some flags
+ */
 export type Flags = {
     option1: boolean;
     option2: boolean;
@@ -30,6 +38,9 @@ export interface InterfaceWithIndexable<T> {
   [yala: string]: T;
 }
 
+/**
+ * Directions of the app
+ */
 export enum Direction {
     Up,
     Down,

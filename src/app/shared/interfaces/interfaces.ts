@@ -8,7 +8,7 @@ export interface superString {
 /**
  * An interface just for documentation purpose
  */
-interface LabelledTodo {
+export interface LabelledTodo {
     title: string;
     completed: Boolean;
     editing?: Boolean;
