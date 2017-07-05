@@ -25,7 +25,7 @@ const PIPES_AND_DIRECTIVES = [
         BrowserModule
     ],
     declarations: [
-        COMPONENTS,
+        TodoComponent,
         PIPES_AND_DIRECTIVES
     ],
     exports: [TodoComponent]
