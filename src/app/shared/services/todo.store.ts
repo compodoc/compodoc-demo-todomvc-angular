@@ -21,7 +21,7 @@ export class TodoStore {
     constructor() {
         let persistedTodos = JSON.parse(localStorage.getItem('angular2-todos') || '[]');
         // Normalize back into classes
-        this.todos = persistedTodos.map((todo: { _title: string, completed: Boolean }) => {
+        this.todos = persistedTodos.map((todo: { _title: string, completed: boolean }) => {
             let ret = new Todo(todo._title);
             ret.completed = todo.completed;
             return ret;
