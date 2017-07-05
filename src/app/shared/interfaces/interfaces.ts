@@ -10,8 +10,8 @@ export interface superString {
  */
 export interface LabelledTodo {
     title: string;
-    completed: Boolean;
-    editing?: Boolean;
+    completed: boolean;
+    editing?: boolean;
     readonly x: number;
 }
 

@@ -9,11 +9,11 @@ export class Todo {
     /**
      * Completed status
      */
-    completed: Boolean;
-    /**
-     * Editing status
-     */
-    editing: Boolean;
+     completed: boolean;
+     /**
+      * Editing status
+      */
+     editing: boolean;
 
     /**
      * Just for Compodoc feature demo
@@ -47,7 +47,7 @@ export class Todo {
      *  @example <caption>Usage of fakeMethod</caption>
      *
      *  returns true;
-     *  
+     *
      *  fakeMethod()
      */
     fakeMethod(): boolean {
