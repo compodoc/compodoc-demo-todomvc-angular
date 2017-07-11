@@ -114,8 +114,9 @@ export class TodoStore {
      * See {@link Todo}
      *
      * @param {Todo} todo Todo to remove
+     * @param {any[]} theArgs the rest of arguments
      */
-    remove(todo: Todo) {
+    remove(todo: Todo, ...theArgs) {
         this.todos.splice(this.todos.indexOf(todo), 1);
         this.updateStore();
     }
