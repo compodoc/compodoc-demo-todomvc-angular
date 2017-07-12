@@ -5,13 +5,15 @@ import { AboutComponent } from './about.component';
 import { TodoMVCComponent } from './todomvc/todomvc.component';
 import { CompodocComponent } from './compodoc/compodoc.component';
 
+import { compodocRoute } from './compodoc/compodoc.routing';
+
 const ABOUT_ROUTES: Routes = [
     {
         path: '', component: AboutComponent,
         children: [
             { path: '', redirectTo: 'todomvc', pathMatch: 'full' },
             { path: 'todomvc', component: TodoMVCComponent },
-            { path: 'compodoc', component: CompodocComponent }
+            ...compodocRoute
         ]
     }
 ];

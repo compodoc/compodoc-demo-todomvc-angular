@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home-routing.module';
+import { HomeRouting } from './home-routing.module';
 
 import { HeaderModule } from '../header/';
 import { ListModule } from '../list/';
@@ -27,7 +27,7 @@ import { FooterModule } from '../footer/';
         HeaderModule,
         ListModule,
         FooterModule,
-        HomeRoutingModule
+        HomeRouting
     ],
     exports: [HomeComponent]
 })
