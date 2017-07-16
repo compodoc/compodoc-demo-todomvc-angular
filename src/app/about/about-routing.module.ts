@@ -7,12 +7,14 @@ import { CompodocComponent } from './compodoc/compodoc.component';
 
 import { compodocRoute } from './compodoc/compodoc.routing';
 
+import { Role } from './role';
+
 const ABOUT_ROUTES: Routes = [
     {
         path: '', component: AboutComponent,
         children: [
             { path: '', redirectTo: 'todomvc', pathMatch: 'full' },
-            { path: 'todomvc', component: TodoMVCComponent },
+            { path: 'todomvc', component: TodoMVCComponent, data: { requiresLoggedIn: Role.ROLE_ADMIN} },
             ...compodocRoute
         ]
     }
