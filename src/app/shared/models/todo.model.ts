@@ -1,5 +1,7 @@
 import { superString } from '../interfaces/interfaces';
 
+import { Direction } from '../miscellaneous/miscellaneous';
+
 /**
  * The todo class
  *
@@ -19,6 +21,8 @@ export class Todo {
      * Just for Compodoc feature demo
      */
     oneProperty: superString;
+
+    dir: Direction = Direction.Left;
 
     /**
      * Title
