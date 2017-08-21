@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 /**
  * The about component
@@ -11,6 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
     ngOnInit() {
-        
+
+    }
+
+    /**
+     * HostListener mouseup description
+     */
+    @HostListener('mouseup')
+    onMouseup(): void {
+
     }
 }
