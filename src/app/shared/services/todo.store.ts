@@ -141,10 +141,10 @@ export class TodoStore {
     /**
      * Stop monitoring the todo
      *
-     * @param {LabelledTodo} todo A todo
+     * @param {LabelledTodo} theTodo A todo
      * @returns {Promise<void>} promise resolved once we stop monitoring the todo or it is rejected
      */
-    stopMonitoring(theTodo: LabelledTodo): Promise<void> {
+    stopMonitoring(theTodo?: LabelledTodo): Promise<void> {
         return new Promise<void>((resolve, reject) => {
             //TODO
         });
