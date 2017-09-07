@@ -1,6 +1,6 @@
 import { superString } from '../interfaces/interfaces';
 
-import { Direction } from '../miscellaneous/miscellaneous';
+import { Direction } from '../enums/enum';
 
 /**
  * The todo class
