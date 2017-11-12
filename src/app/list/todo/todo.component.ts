@@ -11,7 +11,7 @@ import { TodoStore } from '../../shared/services/todo.store';
  *    [todo]="todo"
  * </todo>
  * ```
- * <example-url>/screenshots/todo/todo.png</example-url>
+ * <example-url>../screenshots/todo/todo.png</example-url>
  */
 @Component({
     selector: 'todo',
