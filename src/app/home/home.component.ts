@@ -5,7 +5,13 @@ import { Component } from '@angular/core';
  */
 @Component({
     selector: 'home',
-    templateUrl: './home.component.html'
+    template: `
+    <div class="todoapp">
+        <header class="header"></header>
+        <list class="main"></list>
+        <footer></footer>
+    </div>
+  `
 })
 export class HomeComponent {
 
