@@ -30,7 +30,7 @@
   "devDependencies": {
     "@angular/cli": "1.6.8",
     "@angular/compiler-cli": "5.2.4",
-    "@compodoc/compodoc": "^1.0.5",
+    "@compodoc/compodoc": "^1.0.6",
     "@types/node": "^9.4.5",
     "codelyzer": "~4.1.0",
     "ts-node": "4.1.0",
