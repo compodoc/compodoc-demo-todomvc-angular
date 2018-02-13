@@ -3,7 +3,7 @@ branches:
   only:
     - master
 node_js:
-    - "6"
+    - "8"
 install:
     - npm install
 script:
