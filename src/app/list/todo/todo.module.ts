@@ -7,9 +7,16 @@ import { FirstUpperPipe } from '../../shared/pipes/first-upper.pipe';
 
 import { DoNothingDirective } from '../../shared/directives/do-nothing.directive';
 
+/**
+ * @ignore
+ */
 const COMPONENTS = [
     TodoComponent
 ];
+
+/**
+ * @ignore
+ */
 const PIPES_AND_DIRECTIVES = [
     FirstUpperPipe,
     DoNothingDirective

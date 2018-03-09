@@ -5,6 +5,9 @@ import { ListComponent } from './list.component';
 
 import { TodoModule } from './todo/';
 
+/**
+ * @ignore
+ */
 const MODULES = [
     TodoModule,
     BrowserModule

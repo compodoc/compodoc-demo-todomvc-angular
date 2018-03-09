@@ -1,5 +1,8 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 
+/**
+ * Empty parent component for inheritance demo
+ */
 @Component({
     selector: 'empty-parent',
     template: 'empty parent'
