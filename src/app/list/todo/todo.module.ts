@@ -10,17 +10,9 @@ import { DoNothingDirective } from '../../shared/directives/do-nothing.directive
 /**
  * @ignore
  */
-const COMPONENTS = [
-    TodoComponent
-];
+const COMPONENTS = [TodoComponent];
 
-/**
- * @ignore
- */
-const PIPES_AND_DIRECTIVES = [
-    FirstUpperPipe,
-    DoNothingDirective
-];
+const PIPES_AND_DIRECTIVES = [FirstUpperPipe, DoNothingDirective];
 
 /**
  * The todo module
@@ -28,13 +20,8 @@ const PIPES_AND_DIRECTIVES = [
  * Contains the {@link TodoComponent}
  */
 @NgModule({
-    imports: [
-        BrowserModule
-    ],
-    declarations: [
-        TodoComponent,
-        PIPES_AND_DIRECTIVES
-    ],
+    imports: [BrowserModule],
+    declarations: [TodoComponent, PIPES_AND_DIRECTIVES],
     exports: [TodoComponent]
 })
-export class TodoModule { }
+export class TodoModule {}
