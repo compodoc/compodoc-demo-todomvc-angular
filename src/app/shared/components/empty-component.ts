@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { EmptyParentComponent } from './empty-parent.component';
+import { EmptyParentComponent } from './empty-parent-component';
 
 /**
  * Empty component for inheritance demo
