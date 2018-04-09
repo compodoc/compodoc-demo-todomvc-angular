@@ -9,8 +9,8 @@ enum APP_ENUM {
 
 export const APP_ROUTES: Routes = [
     { path: 'about', loadChildren: './about/about.module#AboutModule' },
-    { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: '**', redirectTo: 'home', pathMatch: 'full'}
+    { path: '', redirectTo: APP_ENUMS.home, pathMatch: 'full'},
+    { path: '**', redirectTo: APP_ENUM.home, pathMatch: 'full'}
 ];
 
 /**

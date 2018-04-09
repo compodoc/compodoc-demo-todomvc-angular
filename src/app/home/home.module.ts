@@ -24,7 +24,7 @@ import { FooterModule } from '../footer/';
         FormsModule,
         HttpModule,
 
-        HeaderModule,
+        HeaderModule.forRoot(),
         ListModule,
         FooterModule,
         HomeRoutingModule
