@@ -19,13 +19,17 @@ export class TodoStore {
     todos: Array<Todo>;
 
     constructor() {
-        let persistedTodos = JSON.parse(localStorage.getItem('angular2-todos') || '[]');
+        let persistedTodos = JSON.parse(
+            localStorage.getItem('angular2-todos') || '[]'
+        );
         // Normalize back into classes
-        this.todos = persistedTodos.map((todo: { _title: string, completed: boolean }) => {
-            let ret = new Todo(todo._title);
-            ret.completed = todo.completed;
-            return ret;
-        });
+        this.todos = persistedTodos.map(
+            (todo: { _title: string; completed: boolean }) => {
+                let ret = new Todo(todo._title);
+                ret.completed = todo.completed;
+                return ret;
+            }
+        );
     }
 
     private updateStore() {
@@ -59,7 +63,7 @@ export class TodoStore {
      * @param {boolean} completed Status of all todos
      */
     setAllTo(completed: boolean) {
-        this.todos.forEach((t: Todo) => t.completed = completed);
+        this.todos.forEach((t: Todo) => (t.completed = completed));
         this.updateStore();
     }
 
@@ -146,7 +150,7 @@ export class TodoStore {
      */
     stopMonitoring(theTodo?: LabelledTodo): Promise<void> {
         return new Promise<void>((resolve, reject) => {
-            //TODO
+            // TODO
         });
     }
 }

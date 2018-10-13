@@ -21,7 +21,8 @@ export class TodoComponent {
     /**
      * The entry todo from the parent list
      */
-    @Input() todo: Todo;
+    @Input()
+    todo: Todo;
 
     /**
      * Local reference of TodoStore
@@ -29,40 +30,40 @@ export class TodoComponent {
     todoStore: TodoStore;
 
     constructor(todoStore: TodoStore) {
-		this.todoStore = todoStore;
-	}
+        this.todoStore = todoStore;
+    }
 
-    remove(todo: Todo){
-		this.todoStore.remove(todo);
-	}
+    remove(todo: Todo) {
+        this.todoStore.remove(todo);
+    }
 
     toggleCompletion(todo: Todo) {
-		this.todoStore.toggleCompletion(todo);
-	}
+        this.todoStore.toggleCompletion(todo);
+    }
 
     editTodo(todo: Todo) {
-		todo.editing = true;
-	}
+        todo.editing = true;
+    }
 
     stopEditing(todo: Todo, editedTitle: string) {
-		todo.title = editedTitle;
-		todo.editing = false;
-	}
+        todo.title = editedTitle;
+        todo.editing = false;
+    }
 
-	cancelEditingTodo(todo: Todo) {
-		todo.editing = false;
-	}
+    cancelEditingTodo(todo: Todo) {
+        todo.editing = false;
+    }
 
-	updateEditingTodo(todo: Todo, editedTitle: string) {
-		editedTitle = editedTitle.trim();
-		todo.editing = false;
+    updateEditingTodo(todo: Todo, editedTitle: string) {
+        editedTitle = editedTitle.trim();
+        todo.editing = false;
 
-		if (editedTitle.length === 0) {
-			return this.todoStore.remove(todo);
-		}
+        if (editedTitle.length === 0) {
+            return this.todoStore.remove(todo);
+        }
 
-		todo.title = editedTitle;
+        todo.title = editedTitle;
 
         this.todoStore.update();
-	}
+    }
 }

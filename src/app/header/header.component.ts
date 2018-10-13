@@ -7,13 +7,20 @@ import { TodoStore } from '../shared/services/todo.store';
  */
 @Component({
     selector: 'header',
-    templateUrl: './header.component.html'
+    templateUrl: './header.component.html',
+    styles: [
+        `
+            h1 {
+                margin-top: 75px;
+            }
+        `
+    ]
 })
 export class HeaderComponent {
     /**
      * Application main title
      */
-    title: string = 'todos';
+    title = 'todos';
 
     /**
      * Local reference of TodoStore
@@ -23,19 +30,20 @@ export class HeaderComponent {
     /**
      * The data-binding value of the input tag, added on enter to the todo store
      */
-    @Input() newTodoText: string = '';
+    @Input()
+    newTodoText = '';
 
     constructor(todoStore: TodoStore) {
-		this.todoStore = todoStore;
-	}
+        this.todoStore = todoStore;
+    }
 
     /**
      * Ad a todo to the list
      */
     addTodo() {
-		if (this.newTodoText.trim().length) {
+        if (this.newTodoText.trim().length) {
             this.todoStore.add(this.newTodoText);
-			this.newTodoText = '';
-		}
-	}
+            this.newTodoText = '';
+        }
+    }
 }

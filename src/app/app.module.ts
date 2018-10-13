@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { TodoStore } from './shared/services/todo.store';
 
 /* Routing Module */
-import { AppRoutingModule }   from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { NoopInterceptor } from './shared/interceptors/noopinterceptor.interceptor';

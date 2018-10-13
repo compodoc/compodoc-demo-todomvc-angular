@@ -8,10 +8,7 @@ import { TodoModule } from './todo/';
 /**
  * @ignore
  */
-const MODULES = [
-    TodoModule,
-    BrowserModule
-]
+const MODULES = [TodoModule, BrowserModule];
 
 /**
  * The list of todos module
@@ -25,12 +22,8 @@ const MODULES = [
  * | remaining | displayRemaining |
  */
 @NgModule({
-    imports: [
-        MODULES
-    ],
-    declarations: [
-        ListComponent
-    ],
+    imports: [MODULES],
+    declarations: [ListComponent],
     exports: [ListComponent]
 })
-export class ListModule { }
+export class ListModule {}

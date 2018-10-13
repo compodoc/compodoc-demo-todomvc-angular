@@ -2,14 +2,13 @@
  * PI constant
  * See {@link Todo} for service using it
  */
-export const PI:number = 3.14;
+export const PI = 3.14;
 
 /**
  * PIT let
  * See {@link Todo} for service using it
  */
-export let PIT:number = 4;
-
+export let PIT = 4;
 
 /**
  * A foo bar function
@@ -21,11 +20,11 @@ export function foo(status: string) {
 }
 
 export class StringIndexedItems<T> {
-  [index: string]: T;
+    [index: string]: T;
 }
 
 export interface InterfaceWithIndexable<T> {
-  [yala: string]: T;
+    [yala: string]: T;
 }
 
-export let yo:{ [index:string] : {message: string} } = {};
+export let yo: { [index: string]: { message: string } } = {};

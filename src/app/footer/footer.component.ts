@@ -15,7 +15,9 @@ import { LogMethod, LogProperty, LogPropertyWithArgs, LogClass } from '../shared
     providers: [],
     template: `
     <div class="footer" *ngIf="todoStore.todos.length > 0">
-        <span class="todo-count"><strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? 'item' : 'items'}} left</span>
+        <span class="todo-count">
+            <strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? 'item' : 'items'}} left
+        </span>
         <ul class="filters">
     		<li>
     			<a class="selected btn-filter" [class.selected]="currentFilter === 'all'"  (click)="displayAll()">All</a>
@@ -40,12 +42,12 @@ export class FooterComponent {
      * Local id for EmitterService
      */
     @LogProperty
-    id: string = 'FooterComponent';
+    id = 'FooterComponent';
     /**
      * Starting filter param
      */
     @LogPropertyWithArgs('theCurrentFilter')
-    currentFilter: string = 'all';
+    currentFilter = 'all';
 
     /**
      * The "constructor"
@@ -53,16 +55,16 @@ export class FooterComponent {
      * @param {TodoStore} todoStore A TodoStore
      */
     constructor(todoStore: TodoStore) {
-		this.todoStore = todoStore;
-	}
+        this.todoStore = todoStore;
+    }
 
     /**
      * Removes all the completed todos
      */
     @LogMethod
     removeCompleted() {
-		this.todoStore.removeCompleted();
-	}
+        this.todoStore.removeCompleted();
+    }
 
     /**
      * Display only completed todos

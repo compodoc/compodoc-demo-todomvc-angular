@@ -1,6 +1,6 @@
 export function LogMethod(target: any, key: string) {
     console.log('LogMethod: ' + key);
-};
+}
 
 export function LogProperty(target: any, key: string) {
     console.log('LogProperty: ', key);
