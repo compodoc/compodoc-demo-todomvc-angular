@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header.component';
@@ -7,12 +7,12 @@ import { HeaderComponent } from './header.component';
  * The header module
  */
 @NgModule({
-    imports: [
-        FormsModule
-    ],
-    declarations: [
-        HeaderComponent
-    ],
+    imports: [FormsModule],
+    declarations: [HeaderComponent],
     exports: [HeaderComponent]
 })
-export class HeaderModule { }
+export class HeaderModule {
+    public static forRoot(): ModuleWithProviders {
+        return { ngModule: HeaderModule, providers: [] };
+    }
+}
