@@ -6,7 +6,8 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -a screenshots -n 'TodoMVC Angular documentation' --includes additional-doc"
+        "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json"
+
     },
     "repository": {
         "type": "git",
