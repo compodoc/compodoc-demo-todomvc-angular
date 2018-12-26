@@ -13,25 +13,7 @@ import { LogMethod, LogProperty, LogPropertyWithArgs, LogClass } from '../shared
 @Component({
     selector: 'footer',
     providers: [],
-    template: `
-    <div class="footer" *ngIf="todoStore.todos.length > 0">
-        <span class="todo-count">
-            <strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? 'item' : 'items'}} left
-        </span>
-        <ul class="filters">
-    		<li>
-    			<a class="selected btn-filter" [class.selected]="currentFilter === 'all'"  (click)="displayAll()">All</a>
-    		</li>
-    		<li>
-    			<a class="btn-filter" [class.selected]="currentFilter === 'remaining'" (click)="displayRemaining()">Active</a>
-    		</li>
-    		<li>
-    			<a class="btn-filter"  [class.selected]="currentFilter === 'completed'" (click)="displayCompleted()">Completed</a>
-    		</li>
-    	</ul>
-        <button class="clear-completed" *ngIf="todoStore.getCompleted().length > 0" (click)="removeCompleted()">Clear completed</button>
-    </div>
-`
+    templateUrl: './footer.component.html'
 })
 export class FooterComponent {
     /**
@@ -64,6 +46,17 @@ export class FooterComponent {
     @LogMethod
     removeCompleted() {
         this.todoStore.removeCompleted();
+        switch (this.currentFilter) {
+            case 'completed':
+                EmitterService.get(this.id).emit('displayCompleted');
+                break;
+            case 'remaining':
+                EmitterService.get(this.id).emit('displayRemaining');
+                break;
+            case 'all':
+                EmitterService.get(this.id).emit('displayAll');
+                break;
+        }
     }
 
     /**
