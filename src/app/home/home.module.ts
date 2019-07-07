@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
@@ -16,13 +16,11 @@ import { FooterModule } from '../footer/';
  * Just embedding <home> component and it's routing definition in {@link HomeRoutingModule}
  */
 @NgModule({
-    declarations: [
-        HomeComponent
-    ],
+    declarations: [HomeComponent],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpClientModule,
 
         HeaderModule.forRoot(),
         ListModule,
@@ -31,4 +29,4 @@ import { FooterModule } from '../footer/';
     ],
     exports: [HomeComponent]
 })
-export class HomeModule { }
+export class HomeModule {}

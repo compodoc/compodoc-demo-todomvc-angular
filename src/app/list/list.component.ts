@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 import { TodoStore } from '../shared/services/todo.store';
 
@@ -35,7 +35,7 @@ export class ListComponent {
         const that = this;
         this.todoStore = todoStore;
         this.todos = todoStore.getAll();
-        this.watchTest = Observable.of(todoStore.todos);
+        this.watchTest = of(todoStore.todos);
         EmitterService.get('FooterComponent').subscribe(value => {
             console.log(value);
             switch (value) {
