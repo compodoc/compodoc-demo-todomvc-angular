@@ -6,7 +6,6 @@
         "start": "ng serve",
         "build": "ng build",
         "lint": "ng lint",
-        "compodoc": "compodoc --config .compodocrc",
         "doc": "./node_modules/.bin/compodoc -p tsconfig.app.json -a screenshots -n \"TodoMVC Angular documentation\" --includes additional-doc"
     },
     "private": true,
