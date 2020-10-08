@@ -9,10 +9,10 @@ import { HeaderComponent } from './header.component';
 @NgModule({
     imports: [FormsModule],
     declarations: [HeaderComponent],
-    exports: [HeaderComponent]
+    exports: [HeaderComponent],
 })
 export class HeaderModule {
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders<HeaderModule> {
         return { ngModule: HeaderModule, providers: [] };
     }
 }
