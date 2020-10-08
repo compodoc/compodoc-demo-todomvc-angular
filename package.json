@@ -1,6 +1,7 @@
 {
     "name": "compodoc-demo-todomvc-angular",
     "version": "0.0.0",
+    "url": "https://github.com/compodoc/compodoc-demo-todomvc-angular",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
