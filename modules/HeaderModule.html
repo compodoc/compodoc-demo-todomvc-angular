@@ -208,7 +208,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://angular.io/api/core/ModuleWithProviders" target="_blank" >ModuleWithProviders</a></code>
+                        <b>Returns : </b>    <code>ModuleWithProviders&lt;HeaderModule&gt;</code>
 
                     </div>
                 </td>
@@ -231,10 +231,10 @@ import { HeaderComponent } from &#x27;./header.component&#x27;;
 @NgModule({
     imports: [FormsModule],
     declarations: [HeaderComponent],
-    exports: [HeaderComponent]
+    exports: [HeaderComponent],
 })
 export class HeaderModule {
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders&lt;HeaderModule&gt; {
         return { ngModule: HeaderModule, providers: [] };
     }
 }
