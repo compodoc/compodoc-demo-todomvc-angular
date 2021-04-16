@@ -4,7 +4,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
  * This directive does nothing !
  */
 @Directive({
-    selector: '[donothing]'
+    selector: '[donothing]',
 })
 export class DoNothingDirective {
     protected popover: string;
@@ -25,21 +25,16 @@ export class DoNothingDirective {
      * HostListener description 1
      */
     @HostListener('mouseup', ['$event.clientX', '$event.clientY'])
-    onMouseup(mouseX: number, mouseY: number): void {
-
-    }
+    onMouseup(mouseX: number, mouseY: number): void {}
     /**
      * HostListener description 2
      */
     @HostListener('mousedown', ['$event.clientX', '$event.clientY'])
-    onMousedown(mouseX: number, mouseY: number): void {
-
-    }
+    onMousedown(mouseX: number, mouseY: number): void {}
     /**
      * HostListener description 3
      */
-    @HostListener('click')
-    onClick(): void {
-
-    }
+    @HostListener('focus', ['$event'])
+    @HostListener('click', ['$event'])
+    onClick(e: Event): void {}
 }
