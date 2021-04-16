@@ -132,7 +132,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#click">click</a>
+                                <a href="#focus">focus</a>
                             </li>
                             <li>
                                 <a href="#mousedown">mousedown</a>
@@ -216,26 +216,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="click"></a>
+                    <a name="focus"></a>
                     <span class="name">
                         <b>
-                            click
+                            focus
                         </b>
-                        <a href="#click"><span class="icon ion-ios-link"></span></a>
+                        <a href="#focus"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>click()</code>
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>focus(e: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:39</a></div>
                 </td>
             </tr>
 
@@ -276,8 +281,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:33</a></div>
                 </td>
             </tr>
 
@@ -385,7 +390,7 @@
  * This directive does nothing !
  */
 @Directive({
-    selector: &#x27;[donothing]&#x27;
+    selector: &#x27;[donothing]&#x27;,
 })
 export class DoNothingDirective {
     protected popover: string;
@@ -406,23 +411,18 @@ export class DoNothingDirective {
      * HostListener description 1
      */
     @HostListener(&#x27;mouseup&#x27;, [&#x27;$event.clientX&#x27;, &#x27;$event.clientY&#x27;])
-    onMouseup(mouseX: number, mouseY: number): void {
-
-    }
+    onMouseup(mouseX: number, mouseY: number): void {}
     /**
      * HostListener description 2
      */
     @HostListener(&#x27;mousedown&#x27;, [&#x27;$event.clientX&#x27;, &#x27;$event.clientY&#x27;])
-    onMousedown(mouseX: number, mouseY: number): void {
-
-    }
+    onMousedown(mouseX: number, mouseY: number): void {}
     /**
      * HostListener description 3
      */
-    @HostListener(&#x27;click&#x27;)
-    onClick(): void {
-
-    }
+    @HostListener(&#x27;focus&#x27;, [&#x27;$event&#x27;])
+    @HostListener(&#x27;click&#x27;, [&#x27;$event&#x27;])
+    onClick(e: Event): void {}
 }
 </code></pre>
     </div>
