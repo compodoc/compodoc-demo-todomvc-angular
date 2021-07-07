@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -34,10 +35,10 @@
 <p>This project was generated with <a href="https://github.com/angular/angular-cli">angular-cli</a>.</p>
 <p>It is a demo project for demonstrating Compodoc features :</p>
 <ul>
-<li>architecture</li>
-<li>components documentation</li>
-<li>embedding images</li>
-<li>documentating methods and properties of components, classes, interfaces, etc...</li>
+<li>  architecture</li>
+<li>  components documentation</li>
+<li>  embedding images</li>
+<li>  documentating methods and properties of components, classes, interfaces, etc...</li>
 </ul>
 <h2 id="development-server">Development server</h2>
 <p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
@@ -107,9 +108,9 @@
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="./js/menu-wc.js" defer></script>
+       
+       <script type="module" src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 

@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -58,16 +59,16 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#Flags" title="src/app/shared/miscellaneous/miscellaneous-types.ts"><b>Flags</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
+                            <a href="#Flags" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Flags</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
                         </li>
                         <li>
-                            <a href="#Name" title="src/app/shared/miscellaneous/miscellaneous-types.ts"><b>Name</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
+                            <a href="#Name" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Name</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
                         </li>
                         <li>
-                            <a href="#NameResolver" title="src/app/shared/miscellaneous/miscellaneous-types.ts"><b>NameResolver</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
+                            <a href="#NameResolver" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>NameResolver</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
                         </li>
                         <li>
-                            <a href="#Something" title="src/app/shared/miscellaneous/miscellaneous-types.ts"><b>Something</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
+                            <a href="#Something" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Something</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -83,7 +84,7 @@
             <tr>
                 <td class="col-md-4">
                     <a name="Flags"></a>
-                    <span class="name"><b>Flags</b><a href="#Flags"><span class="icon ion-ios-link"></span></a></span>
+                    <span class="name "><b>Flags</b><a href="#Flags"><span class="icon ion-ios-link"></span></a></span>
                 </td>
             </tr>
             <tr>
@@ -105,7 +106,7 @@
             <tr>
                 <td class="col-md-4">
                     <a name="Name"></a>
-                    <span class="name"><b>Name</b><a href="#Name"><span class="icon ion-ios-link"></span></a></span>
+                    <span class="name "><b>Name</b><a href="#Name"><span class="icon ion-ios-link"></span></a></span>
                 </td>
             </tr>
             <tr>
@@ -121,7 +122,7 @@
             <tr>
                 <td class="col-md-4">
                     <a name="NameResolver"></a>
-                    <span class="name"><b>NameResolver</b><a href="#NameResolver"><span class="icon ion-ios-link"></span></a></span>
+                    <span class="name "><b>NameResolver</b><a href="#NameResolver"><span class="icon ion-ios-link"></span></a></span>
                 </td>
             </tr>
             <tr>
@@ -137,7 +138,7 @@
             <tr>
                 <td class="col-md-4">
                     <a name="Something"></a>
-                    <span class="name"><b>Something</b><a href="#Something"><span class="icon ion-ios-link"></span></a></span>
+                    <span class="name "><b>Something</b><a href="#Something"><span class="icon ion-ios-link"></span></a></span>
                 </td>
             </tr>
             <tr>
@@ -174,9 +175,9 @@
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

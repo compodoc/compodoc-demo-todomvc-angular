@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -43,7 +44,9 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>ClockInterface</li>
+  <li
+  >
+  ClockInterface</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -67,20 +70,16 @@
             <code>src/app/shared/interfaces/clock.interface.ts</code>
         </p>
 
+
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
                 <p>A class interface just for documentation purpose</p>
-<p>```typescript</p>
-<ul>
-<li>class Clock implements ClockInterface {</li>
-<li>currentTime: Date;</li>
-<li>constructor(h: number, m: number) { }</li>
-<li>}</li>
-<li>```</li>
-</ul>
-
+<div><pre class="line-numbers"><code class="language-typescript">class Clock implements ClockInterface {
+    currentTime: Date;
+    constructor(h: number, m: number) { }
+}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -103,7 +102,11 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#currentTime">currentTime</a>
+                                        <a href="#currentTime" 
+                                                class="deprecated-name"
+                                            >
+                                            currentTime
+                                        </a>
                                 </li>
                             </ul>
                         </td>
@@ -117,7 +120,10 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                    <a href="#reset">reset</a>
+                                    <a href="#reset" 
+>
+                                        reset
+                                    </a>
                                 </li>
                             </ul>
                         </td>
@@ -137,9 +143,7 @@
                 <td class="col-md-4">
                     <a name="reset"></a>
                     <span class="name">
-                        <b>
-                            reset
-                        </b>
+                        <span ><b>reset</b></span>
                         <a href="#reset"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -153,8 +157,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/shared/interfaces/clock.interface.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/shared/interfaces/clock.interface.ts:23</a></div>
                 </td>
             </tr>
 
@@ -181,7 +185,16 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="currentTime"></a>
-                                        <span class="name"><b>currentTime</b><a href="#currentTime"><span class="icon ion-ios-link"></span></a></span>
+                                        <span class="name deprecated-name"><b>currentTime</b>
+                                            <a href="#currentTime">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4 deprecated">
+                                        The current time property is deprecated
                                     </td>
                                 </tr>
                                 <tr>
@@ -224,6 +237,7 @@
 
 /**
  * A class interface just for documentation purpose
+ *
  * &#x60;&#x60;&#x60;typescript
  * class Clock implements ClockInterface {
  *     currentTime: Date;
@@ -235,6 +249,7 @@ interface ClockInterface extends TimeInterface {
     /**
      * The current time
      * @type {Date}
+     * @deprecated The current time property is deprecated
      */
     currentTime: Date;
     /**
@@ -275,9 +290,9 @@ interface ClockInterface extends TimeInterface {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

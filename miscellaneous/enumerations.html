@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -58,16 +59,16 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#APP_ENUM" title="src/app/app-routing.module.ts"><b>APP_ENUM</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                            <a href="#APP_ENUM" title="src/app/app-routing.module.ts" ><b>APP_ENUM</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#APP_ENUMS" title="src/app/app-routes.enum.ts"><b>APP_ENUMS</b>&nbsp;&nbsp;&nbsp;(src/.../app-routes.enum.ts)</a>
+                            <a href="#APP_ENUMS" title="src/app/app-routes.enum.ts" ><b>APP_ENUMS</b>&nbsp;&nbsp;&nbsp;(src/.../app-routes.enum.ts)</a>
                         </li>
                         <li>
-                            <a href="#Direction" title="src/app/shared/enums/enum.ts"><b>Direction</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
+                            <a href="#Direction" title="src/app/shared/enums/enum.ts" ><b>Direction</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
                         </li>
                         <li>
-                            <a href="#PopupEffect" title="src/app/shared/enums/enum.ts"><b>PopupEffect</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
+                            <a href="#PopupEffect" title="src/app/shared/enums/enum.ts" ><b>PopupEffect</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -83,7 +84,7 @@
                 <tr>
                     <td class="col-md-4">
                         <a name="APP_ENUM"></a>
-                        <span class="name"><b>APP_ENUM</b><a href="#APP_ENUM"><span class="icon ion-ios-link"></span></a></span>
+                        <span class="name "><b>APP_ENUM</b><a href="#APP_ENUM"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                         <tr>
@@ -106,7 +107,7 @@
                 <tr>
                     <td class="col-md-4">
                         <a name="APP_ENUMS"></a>
-                        <span class="name"><b>APP_ENUMS</b><a href="#APP_ENUMS"><span class="icon ion-ios-link"></span></a></span>
+                        <span class="name "><b>APP_ENUMS</b><a href="#APP_ENUMS"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                         <tr>
@@ -129,7 +130,7 @@
                 <tr>
                     <td class="col-md-4">
                         <a name="Direction"></a>
-                        <span class="name"><b>Direction</b><a href="#Direction"><span class="icon ion-ios-link"></span></a></span>
+                        <span class="name "><b>Direction</b><a href="#Direction"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                     <tr>
@@ -165,7 +166,7 @@
                 <tr>
                     <td class="col-md-4">
                         <a name="PopupEffect"></a>
-                        <span class="name"><b>PopupEffect</b><a href="#PopupEffect"><span class="icon ion-ios-link"></span></a></span>
+                        <span class="name "><b>PopupEffect</b><a href="#PopupEffect"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
                         <tr>
@@ -217,9 +218,9 @@
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

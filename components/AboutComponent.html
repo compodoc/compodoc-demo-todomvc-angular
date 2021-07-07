@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AboutComponent</li>
+  <li
+  >
+  AboutComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +63,7 @@
 <p class="comment">
     <code>src/app/about/about.component.ts</code>
 </p>
+
 
     <p class="comment">
         <h3>Description</h3>
@@ -138,7 +142,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onMouseup" >onMouseup</a>
                             </li>
                         </ul>
                     </td>
@@ -156,7 +163,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#mouseup">mouseup</a>
+                                <a href="#mouseup" >mouseup</a>
                             </li>
                         </ul>
                     </td>
@@ -177,9 +184,7 @@
                 <td class="col-md-4">
                     <a name="mouseup"></a>
                     <span class="name">
-                        <b>
-                            mouseup
-                        </b>
+                        <span ><b>mouseup</b></span>
                         <a href="#mouseup"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -220,9 +225,7 @@
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -244,6 +247,52 @@
 
             <tr>
                 <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onMouseup"></a>
+                    <span class="name">
+                        <span ><b>onMouseup</b></span>
+                        <a href="#onMouseup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onMouseup()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;mouseup&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/about/about.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>HostListener mouseup description</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -363,9 +412,9 @@ export class AboutComponent implements OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

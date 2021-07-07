@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -43,7 +44,9 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>SearchFunc</li>
+  <li
+  >
+  SearchFunc</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,26 +67,22 @@
             <code>src/app/shared/interfaces/interfaces.ts</code>
         </p>
 
+
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
                 <p>A function type interface just for documentation purpose</p>
-<p>```typescript</p>
-<ul>
-<li>let mySearch: SearchFunc;</li>
-<li>mySearch = function(source: string, subString: string) {</li>
-<li>let result = source.search(subString);</li>
-<li>if (result == -1) {</li>
-<li>return false;</li>
-<li>}</li>
-<li>else {</li>
-<li>return true;</li>
-<li>}</li>
-<li>}</li>
-<li>```</li>
-</ul>
-
+<div><pre class="line-numbers"><code class="language-typescript">let mySearch: SearchFunc;
+mySearch = function(source: string, subString: string) {
+    let result = source.search(subString);
+    if (result == -1) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}</code></pre></div>
             </p>
 
 
@@ -100,7 +99,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <a href="#call-declaration-fd1b522b565dabeb5d276d23593cde74">Unamed property</a>
+                                            <a href="#call-declaration-3e21ab98a64c116ea0f9351ea54f685a">Unamed property</a>
                                 </li>
                             </ul>
                         </td>
@@ -119,7 +118,7 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Signature :</i>
-                                            <a name="call-declaration-fd1b522b565dabeb5d276d23593cde74"></a>
+                                            <a name="call-declaration-3e21ab98a64c116ea0f9351ea54f685a"></a>
                                             <code>
                                                 <!--ts.SyntaxKind.CallSignature-->
                                                     [source: string, subString: string]
@@ -151,6 +150,7 @@
 
 /**
  * An interface just for documentation purpose
+ * @deprecated This interface is deprecated
  */
 export interface LabelledTodo {
     title: string;
@@ -221,9 +221,9 @@ interface StringArray {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

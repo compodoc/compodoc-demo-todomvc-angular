@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -43,7 +44,9 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>StringArray</li>
+  <li
+  >
+  StringArray</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,18 +67,14 @@
             <code>src/app/shared/interfaces/interfaces.ts</code>
         </p>
 
+
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
                 <p>A indexable interface just for documentation purpose</p>
-<p>```typescript</p>
-<ul>
-<li>let myArray: StringArray;</li>
-<li>myArray = [&quot;Bob&quot;, &quot;Fred&quot;];</li>
-<li>```</li>
-</ul>
-
+<div><pre class="line-numbers"><code class="language-typescript">let myArray: StringArray;
+myArray = [&quot;Bob&quot;, &quot;Fred&quot;];</code></pre></div>
             </p>
 
 
@@ -93,7 +92,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/interfaces/interfaces.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/shared/interfaces/interfaces.ts:45</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -110,6 +109,7 @@
 
 /**
  * An interface just for documentation purpose
+ * @deprecated This interface is deprecated
  */
 export interface LabelledTodo {
     title: string;
@@ -180,9 +180,9 @@ interface StringArray {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

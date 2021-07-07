@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
     </head>
     <body>
 
@@ -58,19 +59,19 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#foo" title="src/app/shared/miscellaneous/miscellaneous.ts"><b>foo</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous.ts)</a>
+                            <a href="#foo" title="src/app/shared/miscellaneous/miscellaneous.ts" ><b>foo</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous.ts)</a>
                         </li>
                         <li>
-                            <a href="#LogClass" title="src/app/shared/decorators/log.decorator.ts"><b>LogClass</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogClass" title="src/app/shared/decorators/log.decorator.ts" ><b>LogClass</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
                         </li>
                         <li>
-                            <a href="#LogMethod" title="src/app/shared/decorators/log.decorator.ts"><b>LogMethod</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogMethod" title="src/app/shared/decorators/log.decorator.ts" ><b>LogMethod</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
                         </li>
                         <li>
-                            <a href="#LogProperty" title="src/app/shared/decorators/log.decorator.ts"><b>LogProperty</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogProperty" title="src/app/shared/decorators/log.decorator.ts" ><b>LogProperty</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
                         </li>
                         <li>
-                            <a href="#LogPropertyWithArgs" title="src/app/shared/decorators/log.decorator.ts"><b>LogPropertyWithArgs</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogPropertyWithArgs" title="src/app/shared/decorators/log.decorator.ts" ><b>LogPropertyWithArgs</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -87,9 +88,7 @@
                 <td class="col-md-4">
                     <a name="foo"></a>
                     <span class="name">
-                        <b>
-                            foo
-                        </b>
+                        <span ><b>foo</b></span>
                         <a href="#foo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -149,9 +148,7 @@
                 <td class="col-md-4">
                     <a name="LogClass"></a>
                     <span class="name">
-                        <b>
-                            LogClass
-                        </b>
+                        <span ><b>LogClass</b></span>
                         <a href="#LogClass"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -206,9 +203,7 @@
                 <td class="col-md-4">
                     <a name="LogMethod"></a>
                     <span class="name">
-                        <b>
-                            LogMethod
-                        </b>
+                        <span ><b>LogMethod</b></span>
                         <a href="#LogMethod"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -274,9 +269,7 @@
                 <td class="col-md-4">
                     <a name="LogProperty"></a>
                     <span class="name">
-                        <b>
-                            LogProperty
-                        </b>
+                        <span ><b>LogProperty</b></span>
                         <a href="#LogProperty"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -342,9 +335,7 @@
                 <td class="col-md-4">
                     <a name="LogPropertyWithArgs"></a>
                     <span class="name">
-                        <b>
-                            LogPropertyWithArgs
-                        </b>
+                        <span ><b>LogPropertyWithArgs</b></span>
                         <a href="#LogPropertyWithArgs"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -422,9 +413,9 @@
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
