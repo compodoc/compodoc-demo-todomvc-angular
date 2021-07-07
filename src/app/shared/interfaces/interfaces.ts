@@ -7,6 +7,7 @@ export interface superString {
 
 /**
  * An interface just for documentation purpose
+ * @deprecated This interface is deprecated
  */
 export interface LabelledTodo {
     title: string;
