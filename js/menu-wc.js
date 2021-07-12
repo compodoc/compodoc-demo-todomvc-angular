@@ -104,16 +104,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AboutModule-df6171fd7f72472739608255c046825c"' :
                                             'id="xs-components-links-module-AboutModule-df6171fd7f72472739608255c046825c"' }>
                                             <li class="link">
-                                                <a href="components/AboutComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AboutComponent</a>
+                                                <a href="components/AboutComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AboutComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/CompodocComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CompodocComponent</a>
+                                                <a href="components/CompodocComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CompodocComponent</a>
                                             </li>
                                             <li class="link">
-                                                <a href="components/TodoMVCComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoMVCComponent</a>
+                                                <a href="components/TodoMVCComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoMVCComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -130,8 +127,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-cad670cd6ee13d95d209065fb5914206"' :
                                             'id="xs-components-links-module-AppModule-cad670cd6ee13d95d209065fb5914206"' }>
                                             <li class="link">
-                                                <a href="components/AppComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
+                                                <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -145,8 +141,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AppModule-cad670cd6ee13d95d209065fb5914206"' :
                                         'id="xs-injectables-links-module-AppModule-cad670cd6ee13d95d209065fb5914206"' }>
                                         <li class="link">
-                                            <a href="injectables/TodoStore.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoStore</a>
+                                            <a href="injectables/TodoStore.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoStore</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -166,8 +161,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FooterModule-4e191cecda8c3d37ff4e026741ad4b67"' :
                                             'id="xs-components-links-module-FooterModule-4e191cecda8c3d37ff4e026741ad4b67"' }>
                                             <li class="link">
-                                                <a href="components/FooterComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FooterComponent</a>
+                                                <a href="components/FooterComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FooterComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -184,8 +178,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-HeaderModule-01a1a87cb030a71d2f514e684f4c9f4d"' :
                                             'id="xs-components-links-module-HeaderModule-01a1a87cb030a71d2f514e684f4c9f4d"' }>
                                             <li class="link">
-                                                <a href="components/HeaderComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HeaderComponent</a>
+                                                <a href="components/HeaderComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HeaderComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -202,8 +195,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-HomeModule-87ed69a3d9924293fc88b800af669ceb"' :
                                             'id="xs-components-links-module-HomeModule-87ed69a3d9924293fc88b800af669ceb"' }>
                                             <li class="link">
-                                                <a href="components/HomeComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HomeComponent</a>
+                                                <a href="components/HomeComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HomeComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -223,8 +215,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ListModule-7fecf30277f8cac65e9e73c3fc811853"' :
                                             'id="xs-components-links-module-ListModule-7fecf30277f8cac65e9e73c3fc811853"' }>
                                             <li class="link">
-                                                <a href="components/ListComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ListComponent</a>
+                                                <a href="components/ListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >ListComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -241,8 +232,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' :
                                             'id="xs-components-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' }>
                                             <li class="link">
-                                                <a href="components/TodoComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoComponent</a>
+                                                <a href="components/TodoComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >TodoComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -256,8 +246,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' :
                                         'id="xs-directives-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' }>
                                         <li class="link">
-                                            <a href="directives/DoNothingDirective.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DoNothingDirective</a>
+                                            <a href="directives/DoNothingDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >DoNothingDirective</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -271,8 +260,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' :
                                             'id="xs-pipes-links-module-TodoModule-f511f1dcb48009f273b93f18e4b27268"' }>
                                             <li class="link">
-                                                <a href="pipes/FirstUpperPipe.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FirstUpperPipe</a>
+                                                <a href="pipes/FirstUpperPipe.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FirstUpperPipe</a>
                                             </li>
                                         </ul>
                                     </li>
