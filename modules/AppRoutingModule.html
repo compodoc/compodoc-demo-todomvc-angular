@@ -74,27 +74,28 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { AboutModule } from &#x27;./about&#x27;;
 
 import { APP_ENUMS } from &#x27;./app-routes.enum&#x27;;
 
 enum APP_ENUM {
-    home &#x3D; &#x27;home&#x27;
+    home &#x3D; &#x27;home&#x27;,
 }
 
 export const APP_ROUTES: Routes &#x3D; [
     {
         path: &#x27;about&#x27;,
-        loadChildren: () &#x3D;&gt;
-            &quot;import(&#x27;./about/about.module&#x27;).then(m &#x3D;&gt; m.AboutModule)&quot;
+        loadChildren: (): Promise&lt;AboutModule&gt; &#x3D;&gt;
+            &quot;import(&#x27;./about/about.module&#x27;).then((m) &#x3D;&gt; m.AboutModule)&quot;,
     },
     //{ path: &#x27;about&#x27;, loadChildren: &#x27;./about/about.module#AboutModule&#x27; },
     { path: &#x27;&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; },
-    { path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; }
+    { path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; },
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(APP_ROUTES)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}
 </code></pre>
