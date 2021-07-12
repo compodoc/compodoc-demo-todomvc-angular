@@ -25,6 +25,15 @@ export class Todo {
     dir: Direction = Direction.Left;
 
     /**
+     * Another private property
+     */
+    #newprivateproperty: boolean = false;
+
+    #clicked() {
+        this.editing = true;
+    }
+
+    /**
      * Title
      */
     private _title: string;
