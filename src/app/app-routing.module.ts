@@ -11,8 +11,7 @@ enum APP_ENUM {
 export const APP_ROUTES: Routes = [
     {
         path: 'about',
-        loadChildren: (): Promise<AboutModule> =>
-            import('./about/about.module').then((m) => m.AboutModule),
+        loadChildren: () => import('./about/about.module').then((m) => m.AboutModule),
     },
     //{ path: 'about', loadChildren: './about/about.module#AboutModule' },
     { path: '', redirectTo: APP_ENUMS.home, pathMatch: 'full' },
