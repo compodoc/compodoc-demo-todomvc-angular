@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Todo } from '../../shared/models/todo.model';
 
 import { TodoStore } from '../../shared/services/todo.store';
+import { DoNothingDirective } from 'src/app/shared/directives/do-nothing.directive';
 
 /**
  * The todo component
@@ -15,7 +16,9 @@ import { TodoStore } from '../../shared/services/todo.store';
  */
 @Component({
     selector: 'todo',
-    templateUrl: './todo.component.html'
+    templateUrl: './todo.component.html',
+    standalone: true,
+    imports: [DoNothingDirective],
 })
 export class TodoComponent {
     /**

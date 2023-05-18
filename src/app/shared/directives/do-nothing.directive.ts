@@ -5,6 +5,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
  */
 @Directive({
     selector: '[donothing]',
+    standalone: true,
 })
 export class DoNothingDirective {
     protected popover: string;
