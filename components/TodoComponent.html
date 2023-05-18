@@ -206,7 +206,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/list/todo/todo.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/list/todo/todo.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -262,7 +262,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/list/todo/todo.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/list/todo/todo.component.ts:28</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -302,8 +302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:56</a></div>
                 </td>
             </tr>
 
@@ -371,8 +371,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:47</a></div>
                 </td>
             </tr>
 
@@ -440,8 +440,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:39</a></div>
                 </td>
             </tr>
 
@@ -509,8 +509,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:51</a></div>
                 </td>
             </tr>
 
@@ -590,8 +590,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:43</a></div>
                 </td>
             </tr>
 
@@ -659,8 +659,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="57"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:57</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:60</a></div>
                 </td>
             </tr>
 
@@ -745,7 +745,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/list/todo/todo.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/list/todo/todo.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -783,6 +783,7 @@
 import { Todo } from &#x27;../../shared/models/todo.model&#x27;;
 
 import { TodoStore } from &#x27;../../shared/services/todo.store&#x27;;
+import { DoNothingDirective } from &#x27;src/app/shared/directives/do-nothing.directive&#x27;;
 
 /**
  * The todo component
@@ -795,7 +796,9 @@ import { TodoStore } from &#x27;../../shared/services/todo.store&#x27;;
  */
 @Component({
     selector: &#x27;todo&#x27;,
-    templateUrl: &#x27;./todo.component.html&#x27;
+    templateUrl: &#x27;./todo.component.html&#x27;,
+    standalone: true,
+    imports: [DoNothingDirective],
 })
 export class TodoComponent {
     /**
@@ -900,6 +903,8 @@ export class TodoComponent {
     var ACTUAL_COMPONENT = {'name': 'TodoComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

@@ -85,8 +85,7 @@ enum APP_ENUM {
 export const APP_ROUTES: Routes &#x3D; [
     {
         path: &#x27;about&#x27;,
-        loadChildren: (): Promise&lt;AboutModule&gt; &#x3D;&gt;
-            &quot;import(&#x27;./about/about.module&#x27;).then((m) &#x3D;&gt; m.AboutModule)&quot;,
+        loadChildren: () &#x3D;&gt; &quot;import(&#x27;./about/about.module&#x27;).then((m) &#x3D;&gt; m.AboutModule)&quot;,
     },
     //{ path: &#x27;about&#x27;, loadChildren: &#x27;./about/about.module#AboutModule&#x27; },
     { path: &#x27;&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; },
@@ -101,6 +100,8 @@ export class AppRoutingModule {}
 </code></pre>
     </div>
 </div>
+
+
 
 
 

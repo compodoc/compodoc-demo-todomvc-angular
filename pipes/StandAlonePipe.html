@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-typealiases">
+               <div class="content pipe">
                    <div class="content-data">
 
 
@@ -41,117 +41,153 @@
 
 
 
-
-
-
-
-
-
-
 <ol class="breadcrumb">
-  <li>Miscellaneous</li>
-  <li>Type aliases</li>
+  <li>Pipes</li>
+  <li >StandAlonePipe</li>
 </ol>
 
-<section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/pipes/standalone.pipe.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover metadata">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Name</td>
+                        <td class="col-md-9">standalone</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#Flags" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Flags</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#Name" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Name</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#NameResolver" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>NameResolver</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#Something" title="src/app/shared/miscellaneous/miscellaneous-types.ts" ><b>Something</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous-types.ts)</a>
-                        </li>
-                    </ul>
+                    <a name="transform"></a>
+                    <span class="name">
+                        <span ><b>transform</b></span>
+                        <a href="#transform"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>transform(value, args)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="8"
+                            class="link-to-prism">src/app/shared/pipes/standalone.pipe.ts:8</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>args</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
 
-    <h3>src/app/shared/miscellaneous/miscellaneous-types.ts</h3>
-    <section>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Flags"></a>
-                    <span class="name "><b>Flags</b><a href="#Flags"><span class="icon ion-ios-link"></span></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Some flags</p>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PipeTransform, Pipe } from &#x27;@angular/core&#x27;;
+
+@Pipe({
+    name: &#x27;standalone&#x27;,
+    standalone: true,
+})
+export class StandAlonePipe implements PipeTransform {
+    transform(value, args) {
+        return &#x27;StandAlone Pipe ;)&#x27;;
+    }
+}
+</code></pre>
+    </div>
+
 </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <code>    <code>literal type</code>
-</code>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Name"></a>
-                    <span class="name "><b>Name</b><a href="#Name"><span class="icon ion-ios-link"></span></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <code>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="NameResolver"></a>
-                    <span class="name "><b>NameResolver</b><a href="#NameResolver"><span class="icon ion-ios-link"></span></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <code>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-</code>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Something"></a>
-                    <span class="name "><b>Something</b><a href="#Something"><span class="icon ion-ios-link"></span></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <code>    <code>number | string</code>
-</code>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+
+
+
+
+
+
+
+
 
 
                    </div><div class="search-results">
@@ -179,8 +215,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-typealiases';
-            var COMPODOC_CURRENT_PAGE_URL = 'typealiases.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'pipe';
+            var COMPODOC_CURRENT_PAGE_URL = 'StandAlonePipe.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
