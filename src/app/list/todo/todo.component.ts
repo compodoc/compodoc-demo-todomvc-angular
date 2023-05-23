@@ -24,7 +24,10 @@ export class TodoComponent {
     /**
      * The entry todo from the parent list
      */
-    @Input()
+    @Input({
+        required: true,
+        alias: 'todo',
+    })
     todo: Todo;
 
     /**

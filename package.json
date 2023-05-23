@@ -29,7 +29,7 @@
         "@angular/cli": "~16.0.2",
         "@angular/compiler-cli": "^16.0.0",
         "@angular/language-service": "~16.0.0",
-        "@compodoc/compodoc": "1.1.19",
+        "@compodoc/compodoc": "1.1.20",
         "@types/node": "~20.2.1",
         "ts-node": "~10.9.1",
         "tslint": "~6.1.3",

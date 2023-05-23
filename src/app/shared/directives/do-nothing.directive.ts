@@ -1,4 +1,5 @@
-import { Directive, HostBinding, HostListener, Input } from '@angular/core';
+import { Directive, HostBinding, HostListener } from '@angular/core';
+import { BorderDirective } from './border.directive';
 
 /**
  * This directive does nothing !
@@ -6,6 +7,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 @Directive({
     selector: '[donothing]',
     standalone: true,
+    hostDirectives: [BorderDirective],
 })
 export class DoNothingDirective {
     protected popover: string;
