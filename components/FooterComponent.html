@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -35,29 +35,33 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   FooterComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -76,10 +80,11 @@
 
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -95,6 +100,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>footer</code></td>
             </tr>
+
+
 
 
 
@@ -115,7 +122,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -128,9 +135,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#currentFilter" >currentFilter</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#id" >id</a>
                             </li>
                             <li>
@@ -158,6 +167,7 @@
                                 <a href="#displayRemaining" >displayRemaining</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#removeCompleted" >removeCompleted</a>
                             </li>
                         </ul>
@@ -172,7 +182,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -232,7 +242,7 @@
 
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -360,6 +370,7 @@
                 <td class="col-md-4">
                     <a name="removeCompleted"></a>
                     <span class="name">
+                        <span class="modifier"></span>
                         <span ><b>removeCompleted</b></span>
                         <a href="#removeCompleted"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -367,7 +378,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>removeCompleted()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeCompleted()</code>
                 </td>
             </tr>
 
@@ -401,7 +413,7 @@
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -412,6 +424,7 @@
                 <td class="col-md-4">
                     <a name="currentFilter"></a>
                     <span class="name">
+                            <span class="modifier"></span>
                         <span ><b>currentFilter</b></span>
                         <a href="#currentFilter"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -458,6 +471,7 @@
                 <td class="col-md-4">
                     <a name="id"></a>
                     <span class="name">
+                            <span class="modifier"></span>
                         <span ><b>id</b></span>
                         <a href="#id"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -535,7 +549,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 import { TodoStore } from &#x27;../shared/services/todo.store&#x27;;
@@ -624,7 +638,7 @@ export class FooterComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;footer&quot; *ngIf&#x3D;&quot;todoStore.todos.length &gt; 0&quot;&gt;
     &lt;span class&#x3D;&quot;todo-count&quot;&gt;&lt;strong&gt;{{todoStore.getRemaining().length}}&lt;/strong&gt; {{todoStore.getRemaining().length &#x3D;&#x3D; 1 ? &#x27;item&#x27; : &#x27;items&#x27;}} left&lt;/span&gt;
     &lt;ul class&#x3D;&quot;filters&quot;&gt;
@@ -644,7 +658,7 @@ export class FooterComponent {
     </div>
 
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -671,7 +685,7 @@ export class FooterComponent {
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="footer" *ngIf="todoStore.todos.length > 0">    <span class="todo-count"><strong>{{todoStore.getRemaining().length}}</strong> {{todoStore.getRemaining().length == 1 ? \'item\' : \'items\'}} left</span>    <ul class="filters">		<li>			<a class="selected btn-filter" [class.selected]="currentFilter === \'all\'"  (click)="displayAll()">All</a>		</li>		<li>			<a class="btn-filter" [class.selected]="currentFilter === \'remaining\'" (click)="displayRemaining()">Active</a>		</li>		<li>			<a class="btn-filter"  [class.selected]="currentFilter === \'completed\'" (click)="displayCompleted()">Completed</a>		</li>	</ul>    <button class="clear-completed" *ngIf="todoStore.getCompleted().length > 0" (click)="removeCompleted()">Clear completed</button></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CompodocComponent', 'selector': 'compodoc'},{'name': 'EmptyComponent', 'selector': 'cp-empty'},{'name': 'EmptyParentComponent', 'selector': 'empty-parent'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'HeaderComponent', 'selector': 'header'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'ListComponent', 'selector': 'list'},{'name': 'TodoComponent', 'selector': 'todo'},{'name': 'TodoMVCComponent', 'selector': 'todomvc'}];
-    var DIRECTIVES = [{'name': 'DoNothingDirective', 'selector': '[donothing]'}];
+    var DIRECTIVES = [{'name': 'BorderDirective', 'selector': '[appBorder]'},{'name': 'DoNothingDirective', 'selector': '[donothing]'},{'name': 'HighlightAndBorderDirective', 'selector': '[appHighlightAndBorder]'},{'name': 'HighlightDirective', 'selector': '[appHighlight]'}];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};
 </script>
 <script src="../js/tree.js"></script>

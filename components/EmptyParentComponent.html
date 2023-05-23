@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -35,26 +35,29 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   EmptyParentComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -75,14 +78,15 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code>OnInit</code>
     </p>
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -98,6 +102,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>empty-parent</code></td>
             </tr>
+
+
 
 
 
@@ -118,7 +124,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -190,7 +196,7 @@
 </section>
 
 
-    <section>
+    <section data-compodoc="block-inputs">
     <h3 id="inputs">Inputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -214,7 +220,7 @@
             </tbody>
         </table>
 </section>
-    <section>
+    <section data-compodoc="block-outputs">
     <h3 id="outputs">Outputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -234,7 +240,7 @@
 </section>
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -277,7 +283,7 @@
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -308,7 +314,7 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, Output, OnInit } from &#x27;@angular/core&#x27;;
 
 /**
@@ -332,7 +338,7 @@ export class EmptyParentComponent implements OnInit {
 
 
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -359,7 +365,7 @@ export class EmptyParentComponent implements OnInit {
 <script>
         var COMPONENT_TEMPLATE = '<div>empty parent</div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CompodocComponent', 'selector': 'compodoc'},{'name': 'EmptyComponent', 'selector': 'cp-empty'},{'name': 'EmptyParentComponent', 'selector': 'empty-parent'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'HeaderComponent', 'selector': 'header'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'ListComponent', 'selector': 'list'},{'name': 'TodoComponent', 'selector': 'todo'},{'name': 'TodoMVCComponent', 'selector': 'todomvc'}];
-    var DIRECTIVES = [{'name': 'DoNothingDirective', 'selector': '[donothing]'}];
+    var DIRECTIVES = [{'name': 'BorderDirective', 'selector': '[appBorder]'},{'name': 'DoNothingDirective', 'selector': '[donothing]'},{'name': 'HighlightAndBorderDirective', 'selector': '[appHighlightAndBorder]'},{'name': 'HighlightDirective', 'selector': '[appHighlight]'}];
     var ACTUAL_COMPONENT = {'name': 'EmptyParentComponent'};
 </script>
 <script src="../js/tree.js"></script>

@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -38,24 +38,33 @@
 
 
 <ol class="breadcrumb">
-  <li>Directives</li>
-  <li >DoNothingDirective</li>
+  <li class="breadcrumb-item">Directives</li>
+  <li class="breadcrumb-item" >DoNothingDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+        <li class="nav-item">
+            <a href="#readme" 
+                class="nav-link"
+                
+                role="tab" id="readme-tab" data-bs-toggle="tab" data-link="readme">README</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info">
+    <div class="tab-pane fade active in" id="info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -75,7 +84,7 @@
 
 
 
-        <section>
+        <section data-compodoc="block-metadata">
             <h3>Metadata</h3>
             <table class="table table-sm table-hover metadata">
                 <tbody>
@@ -85,11 +94,25 @@
                         <td class="col-md-9"><code>[donothing]</code></td>
                     </tr>
 
+                    <tr>
+                        <td class="col-md-3">Standalone</td>
+                        <td class="col-md-9"><code>true</code></td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">HostDirectives</td>
+                        <td class="col-md-9">
+                                        <code><a href="../directives/BorderDirective.html" target="_self" >BorderDirective</a></code>
+<br/>
+                        </td>
+                    </tr>
+
+
                 </tbody>
             </table>
         </section>
 
-            <section>
+            <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -102,6 +125,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#color" >color</a>
                             </li>
                             <li>
@@ -121,12 +145,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                 <a href="#onClick" >onClick</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#onMousedown" >onMousedown</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#onMouseup" >onMouseup</a>
                             </li>
                         </ul>
@@ -178,7 +206,7 @@
     </table>
 </section>
 
-            <section>
+            <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -189,7 +217,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -205,7 +233,7 @@
 
 
 
-            <section>
+            <section data-compodoc="block-properties">
     <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -225,7 +253,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -240,7 +268,7 @@
     </table>
 </section>
 
-            <section>
+            <section data-compodoc="block-host-listener">
     <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -263,8 +291,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:42</a></div>
                 </td>
             </tr>
 
@@ -300,8 +328,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:42</a></div>
                 </td>
             </tr>
 
@@ -337,8 +365,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:36</a></div>
                 </td>
             </tr>
 
@@ -374,8 +402,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:31</a></div>
                 </td>
             </tr>
 
@@ -390,7 +418,7 @@
         </tbody>
     </table>
 </section>
-            <section>
+            <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -401,6 +429,8 @@
                 <td class="col-md-4">
                     <a name="onClick"></a>
                     <span class="name">
+                        <span class="modifier"></span>
+                        <span class="modifier"></span>
                         <span ><b>onClick</b></span>
                         <a href="#onClick"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -408,7 +438,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onClick(e: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onClick(e: Event)</code>
                 </td>
             </tr>
 
@@ -422,8 +453,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:42</a></div>
                 </td>
             </tr>
 
@@ -448,7 +479,7 @@
                                 <tr>
                                     <td>e</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                            <code>Event</code>
                                     </td>
 
                                     <td>
@@ -479,6 +510,7 @@
                 <td class="col-md-4">
                     <a name="onMousedown"></a>
                     <span class="name">
+                        <span class="modifier"></span>
                         <span ><b>onMousedown</b></span>
                         <a href="#onMousedown"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -486,7 +518,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onMousedown(mouseX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, mouseY: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onMousedown(mouseX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, mouseY: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
@@ -500,8 +533,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:36</a></div>
                 </td>
             </tr>
 
@@ -569,6 +602,7 @@
                 <td class="col-md-4">
                     <a name="onMouseup"></a>
                     <span class="name">
+                        <span class="modifier"></span>
                         <span ><b>onMouseup</b></span>
                         <a href="#onMouseup"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -576,7 +610,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onMouseup(mouseX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, mouseY: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onMouseup(mouseX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, mouseY: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
@@ -590,8 +625,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:31</a></div>
                 </td>
             </tr>
 
@@ -654,7 +689,7 @@
         </tbody>
     </table>
 </section>
-            <section>
+            <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -665,6 +700,7 @@
                 <td class="col-md-4">
                     <a name="color"></a>
                     <span class="name">
+                            <span class="modifier"></span>
                         <span ><b>color</b></span>
                         <a href="#color"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -687,7 +723,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -720,7 +756,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/directives/do-nothing.directive.ts:13</a></div>
                         </td>
                     </tr>
 
@@ -732,13 +768,14 @@
 
     </div>
 
-    <div class="tab-pane fade " id="c-readme">
-        <p><h1 id="do-nothing">Do-nothing</h1>
+    <div class="tab-pane fade " id="readme">
+        <p><h1>Do-nothing</h1>
 </p>
     </div>
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, HostBinding, HostListener, Input } from &#x27;@angular/core&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, HostBinding, HostListener } from &#x27;@angular/core&#x27;;
+import { BorderDirective } from &#x27;./border.directive&#x27;;
 
 /**
  * This directive does nothing !
@@ -746,6 +783,7 @@
 @Directive({
     selector: &#x27;[donothing]&#x27;,
     standalone: true,
+    hostDirectives: [BorderDirective],
 })
 export class DoNothingDirective {
     protected popover: string;

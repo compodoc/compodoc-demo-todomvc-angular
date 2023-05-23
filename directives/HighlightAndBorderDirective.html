@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content directive">
                    <div class="content-data">
 
 
@@ -37,14 +37,9 @@
 
 
 
-
-
-
-
-
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">Classes</li>
-  <li class="breadcrumb-item" >StringIndexedItems</li>
+  <li class="breadcrumb-item">Directives</li>
+  <li class="breadcrumb-item" >HighlightAndBorderDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -68,7 +63,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/shared/miscellaneous/miscellaneous.ts</code>
+            <code>src/app/shared/directives/highlight-and-border.directive.ts</code>
         </p>
 
 
@@ -76,28 +71,43 @@
 
 
 
+        <section data-compodoc="block-metadata">
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover metadata">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[appHighlightAndBorder]</code></td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">Standalone</td>
+                        <td class="col-md-9"><code>true</code></td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">HostDirectives</td>
+                        <td class="col-md-9">
+                                        <code><a href="../directives/HighlightDirective.html" target="_self" >HighlightDirective</a></code>
+<br/>
+                                        <div><i>&nbsp;Inputs</i> : color&nbsp;</div>
+                                        <code><a href="../directives/BorderDirective.html" target="_self" >BorderDirective</a></code>
+<br/>
+                                        <div><i>&nbsp;Inputs</i> : color&nbsp;</div>
+                                        <div><i>&nbsp;Outputs</i> : tat&nbsp;tit&nbsp;</div>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </section>
 
 
 
 
-            <section data-compodoc="block-indexables">
-    <h3 id="inputs">Indexable</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <code>[index: string]:    <code>T</code>
-</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/miscellaneous/miscellaneous.ts:22</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
+
 
 
 
@@ -107,35 +117,35 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export const PI &#x3D; 3.14;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive } from &#x27;@angular/core&#x27;;
+import { BorderDirective } from &#x27;./border.directive&#x27;;
+import { HighlightDirective } from &#x27;./highlight.directive&#x27;;
 
-/**
- * PIT let
- * See {@link Todo} for service using it
- */
-export let PIT &#x3D; 4;
-
-/**
- * A foo bar function
- *
- * @param {string} status A status
- */
-export function foo(status: string) {
-    console.log(&#x27;bar&#x27;);
-}
-
-export class StringIndexedItems&lt;T&gt; {
-    [index: string]: T;
-}
-
-export interface InterfaceWithIndexable&lt;T&gt; {
-    [yala: string]: T;
-}
-
-export let yo: { [index: string]: { message: string } } &#x3D; {};
+@Directive({
+    selector: &#x27;[appHighlightAndBorder]&#x27;,
+    hostDirectives: [
+        {
+            directive: HighlightDirective,
+            inputs: [&#x27;color&#x27;],
+        },
+        {
+            directive: BorderDirective,
+            inputs: [&#x27;color&#x27;],
+            outputs: [&#x27;tat&#x27;, &#x27;tit&#x27;],
+        },
+    ],
+    standalone: true,
+})
+export class HighlightAndBorderDirective {}
 </code></pre>
     </div>
+
 </div>
+
+
+
+
+
 
 
 
@@ -170,8 +180,8 @@ export let yo: { [index: string]: { message: string } } &#x3D; {};
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'StringIndexedItems.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'HighlightAndBorderDirective.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

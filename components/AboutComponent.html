@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -35,29 +35,33 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   AboutComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -79,16 +83,24 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code>OnInit</code>
     </p>
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
 
 
+
+                <tr>
+                    <td class="col-md-3">HostDirectives</td>
+                    <td class="col-md-9">
+                                    <code><a href="../directives/DoNothingDirective.html" target="_self" >DoNothingDirective</a></code>
+<br/>
+                    </td>
+                </tr>
 
 
 
@@ -112,6 +124,8 @@
 
 
 
+
+
             <tr>
                 <td class="col-md-3">templateUrl</td>
                 <td class="col-md-9"><code>./about.component.html</code></td>
@@ -128,7 +142,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -145,6 +159,7 @@
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                 <a href="#onMouseup" >onMouseup</a>
                             </li>
                         </ul>
@@ -177,7 +192,7 @@
 
 
 
-    <section>
+    <section data-compodoc="block-methods">
     <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -198,8 +213,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/about/about.component.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/about/about.component.ts:24</a></div>
                 </td>
             </tr>
 
@@ -214,7 +229,7 @@
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -239,8 +254,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/about/about.component.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/about/about.component.ts:18</a></div>
                 </td>
             </tr>
 
@@ -262,6 +277,7 @@
                 <td class="col-md-4">
                     <a name="onMouseup"></a>
                     <span class="name">
+                        <span class="modifier"></span>
                         <span ><b>onMouseup</b></span>
                         <a href="#onMouseup"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -269,7 +285,8 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onMouseup()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onMouseup()</code>
                 </td>
             </tr>
 
@@ -283,8 +300,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/app/about/about.component.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/about/about.component.ts:24</a></div>
                 </td>
             </tr>
 
@@ -307,10 +324,11 @@
 </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, HostListener } from &#x27;@angular/core&#x27;;
 
 import { EmptyService } from &#x27;../shared/services/empty.service&#x27;;
+import { DoNothingDirective } from &#x27;../shared/directives/do-nothing.directive&#x27;;
 
 /**
  * The about component
@@ -320,7 +338,8 @@ import { EmptyService } from &#x27;../shared/services/empty.service&#x27;;
 @Component({
     selector: &#x27;about&#x27;,
     templateUrl: &#x27;./about.component.html&#x27;,
-    providers: [EmptyService]
+    providers: [EmptyService],
+    hostDirectives: [DoNothingDirective],
 })
 export class AboutComponent implements OnInit {
     ngOnInit() {}
@@ -334,7 +353,7 @@ export class AboutComponent implements OnInit {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;p&gt;
     This application is a &lt;a [routerLink]&#x3D;&quot;[&#x27;todomvc&#x27;]&quot;&gt;TodoMVC&lt;/a&gt; example written using Angular, with code documented, and ready for &lt;a [routerLink]&#x3D;&quot;[&#x27;compodoc&#x27;]&quot;&gt;compodoc&lt;/a&gt;.
 &lt;/p&gt;
@@ -343,7 +362,7 @@ export class AboutComponent implements OnInit {
     </div>
 
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -370,7 +389,7 @@ export class AboutComponent implements OnInit {
 <script>
         var COMPONENT_TEMPLATE = '<div><p>    This application is a <a [routerLink]="[\'todomvc\']">TodoMVC</a> example written using Angular, with code documented, and ready for <a [routerLink]="[\'compodoc\']">compodoc</a>.</p><router-outlet></router-outlet></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CompodocComponent', 'selector': 'compodoc'},{'name': 'EmptyComponent', 'selector': 'cp-empty'},{'name': 'EmptyParentComponent', 'selector': 'empty-parent'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'HeaderComponent', 'selector': 'header'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'ListComponent', 'selector': 'list'},{'name': 'TodoComponent', 'selector': 'todo'},{'name': 'TodoMVCComponent', 'selector': 'todomvc'}];
-    var DIRECTIVES = [{'name': 'DoNothingDirective', 'selector': '[donothing]'}];
+    var DIRECTIVES = [{'name': 'BorderDirective', 'selector': '[appBorder]'},{'name': 'DoNothingDirective', 'selector': '[donothing]'},{'name': 'HighlightAndBorderDirective', 'selector': '[appHighlightAndBorder]'},{'name': 'HighlightDirective', 'selector': '[appHighlight]'}];
     var ACTUAL_COMPONENT = {'name': 'AboutComponent'};
 </script>
 <script src="../js/tree.js"></script>

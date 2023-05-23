@@ -13,7 +13,7 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
             <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
@@ -35,35 +35,41 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   TodoComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+        <li class="nav-item">
+            <a href="#readme" class="nav-link"
+                role="tab" id="readme-tab" data-bs-toggle="tab" data-link="readme">README</a>
         </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
         </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
-        <li >
-            <a href="#example" role="tab" id="example-tab" data-toggle="tab" data-link="example">Examples</a>
+        <li class="nav-item">
+            <a href="#example" class="nav-link"
+                role="tab" id="example-tab" data-bs-toggle="tab" data-link="example">Examples</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -85,7 +91,7 @@
 
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
@@ -100,9 +106,22 @@
 
 
 
+
             <tr>
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>todo</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">Standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                                <code><a href="../directives/DoNothingDirective.html" target="_self" >DoNothingDirective</a></code>
+                </td>
             </tr>
 
 
@@ -124,7 +143,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -195,7 +214,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -206,7 +225,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/list/todo/todo.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/list/todo/todo.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -244,7 +263,7 @@
         </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-inputs">
     <h3 id="inputs">Inputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -260,9 +279,14 @@
 
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Required : </i>&nbsp;<b>true</b>
+                    </td>
+                </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/list/todo/todo.component.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/list/todo/todo.component.ts:31</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -277,7 +301,7 @@
 
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
@@ -302,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:59</a></div>
                 </td>
             </tr>
 
@@ -371,8 +395,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:50</a></div>
                 </td>
             </tr>
 
@@ -440,8 +464,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:42</a></div>
                 </td>
             </tr>
 
@@ -509,8 +533,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:54</a></div>
                 </td>
             </tr>
 
@@ -590,8 +614,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -659,8 +683,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/app/list/todo/todo.component.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/list/todo/todo.component.ts:63</a></div>
                 </td>
             </tr>
 
@@ -721,7 +745,7 @@
         </tbody>
     </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -745,7 +769,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/list/todo/todo.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/list/todo/todo.component.ts:36</a></div>
                         </td>
                     </tr>
 
@@ -762,8 +786,8 @@
 
 </div>
 
-    <div class="tab-pane fade " id="c-readme">
-        <p><h1 id="todo-component">Todo component</h1>
+    <div class="tab-pane fade " id="readme">
+        <p><h1>Todo component</h1>
 <p>This is the core component of the application.</p>
 <p><img src="/screenshots/todo/todo.png" alt="Screenshot-1" class="img-responsive"></p>
 <p>It display the line of one todo task, and APIs for edition &amp; delete</p>
@@ -777,7 +801,7 @@
 }</code></pre></div></p>
     </div>
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
+    <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 
 import { Todo } from &#x27;../../shared/models/todo.model&#x27;;
@@ -804,7 +828,10 @@ export class TodoComponent {
     /**
      * The entry todo from the parent list
      */
-    @Input()
+    @Input({
+        required: true,
+        alias: &#x27;todo&#x27;,
+    })
     todo: Todo;
 
     /**
@@ -853,7 +880,7 @@ export class TodoComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
+    <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;li [class.completed]&#x3D;&quot;todo.completed&quot; [class.editing]&#x3D;&quot;todo.editing&quot;&gt;
     &lt;div class&#x3D;&quot;view&quot;&gt;
         &lt;input class&#x3D;&quot;toggle&quot; type&#x3D;&quot;checkbox&quot; (click)&#x3D;&quot;toggleCompletion(todo)&quot; [checked]&#x3D;&quot;todo.completed&quot;&gt;
@@ -867,7 +894,7 @@ export class TodoComponent {
     </div>
 
 
-    <div class="tab-pane fade " id="c-tree">
+    <div class="tab-pane fade " id="tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -885,7 +912,7 @@ export class TodoComponent {
         </div>
     </div>
 
-    <div class="tab-pane fade " id="c-example">
+    <div class="tab-pane fade " id="example">
             <iframe class="exampleContainer" src="../screenshots/todo/todo.png">
                 <p>no-iframes</p>
             </iframe>
@@ -899,7 +926,7 @@ export class TodoComponent {
 <script>
         var COMPONENT_TEMPLATE = '<div><li [class.completed]="todo.completed" [class.editing]="todo.editing">    <div class="view">        <input class="toggle" type="checkbox" (click)="toggleCompletion(todo)" [checked]="todo.completed">        <label (dblclick)="editTodo(todo)" donothing>{{todo.title}}</label>        <button class="destroy" (click)="remove(todo)"></button>    </div>    <input class="edit" *ngIf="todo.editing" [value]="todo.title" #editedtodo        (blur)="stopEditing(todo, editedtodo.value)" (keyup.enter)="updateEditingTodo(todo, editedtodo.value)"        (keyup.escape)="cancelEditingTodo(todo)"></li></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CompodocComponent', 'selector': 'compodoc'},{'name': 'EmptyComponent', 'selector': 'cp-empty'},{'name': 'EmptyParentComponent', 'selector': 'empty-parent'},{'name': 'FooterComponent', 'selector': 'footer'},{'name': 'HeaderComponent', 'selector': 'header'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'ListComponent', 'selector': 'list'},{'name': 'TodoComponent', 'selector': 'todo'},{'name': 'TodoMVCComponent', 'selector': 'todomvc'}];
-    var DIRECTIVES = [{'name': 'DoNothingDirective', 'selector': '[donothing]'}];
+    var DIRECTIVES = [{'name': 'BorderDirective', 'selector': '[appBorder]'},{'name': 'DoNothingDirective', 'selector': '[donothing]'},{'name': 'HighlightAndBorderDirective', 'selector': '[appHighlightAndBorder]'},{'name': 'HighlightDirective', 'selector': '[appHighlight]'}];
     var ACTUAL_COMPONENT = {'name': 'TodoComponent'};
 </script>
 <script src="../js/tree.js"></script>
