@@ -13,7 +13,7 @@
     </head>
     <body>
           <script>
-               // Blocking script to avaoid flickering dark mode
+               // Blocking script to avoid flickering dark mode
                // Dark mode toggle button
                var useDark = window.matchMedia('(prefers-color-scheme: dark)');
                var darkModeState = useDark.matches;
@@ -61,10 +61,26 @@
                }
                toggleDarkMode(darkModeState);
           </script>
+          <script>
+              // --- Iframe navigation tracking for Template Playground ---
+              function sendCurrentUrlToParent() {
+                  if (window.parent && window.parent !== window) {
+                      window.parent.postMessage({
+                          type: 'compodoc-iframe-navigate',
+                          url: window.location.pathname + window.location.hash
+                      }, '*');
+                  }
+              }
+              window.addEventListener('hashchange', sendCurrentUrlToParent, false);
+              window.addEventListener('popstate', sendCurrentUrlToParent, false);
+              window.addEventListener('DOMContentLoaded', sendCurrentUrlToParent, false);
+          </script>
 
-        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
-            <a href="./" class="navbar-brand">TodoMVC Angular documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="./" class="navbar-brand">TodoMVC Angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -73,12 +89,16 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content coverage">
                    <div class="content-data">
+
+
+
+
 
 
 
@@ -119,7 +139,7 @@
         <tr class="good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/AboutComponent.html">src/app/about/about.component.ts</a>
+                        <a href="./components/AboutComponent.html">src/app/about/about.component.ts</a>
             </td>
             <td>component</td>
             <td>AboutComponent</td>
@@ -131,7 +151,19 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/CompodocComponent.html">src/app/about/compodoc/compodoc.component.ts</a>
+                        <a href="./miscellaneous/variables.html#ABOUT_ROUTES">src/app/about/about.routes.ts</a>
+            </td>
+            <td>variable</td>
+            <td>ABOUT_ROUTES</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./components/CompodocComponent.html">src/app/about/compodoc/compodoc.component.ts</a>
             </td>
             <td>component</td>
             <td>CompodocComponent</td>
@@ -143,7 +175,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/TodoMVCComponent.html">src/app/about/todomvc/todomvc.component.ts</a>
+                        <a href="./components/TodoMVCComponent.html">src/app/about/todomvc/todomvc.component.ts</a>
             </td>
             <td>component</td>
             <td>TodoMVCComponent</td>
@@ -155,7 +187,19 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/AppComponent.html">src/app/app.component.ts</a>
+                        <a href="./miscellaneous/variables.html#APP_ROUTES">src/app/app-routing.module.ts</a>
+            </td>
+            <td>variable</td>
+            <td>APP_ROUTES</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./components/AppComponent.html">src/app/app.component.ts</a>
             </td>
             <td>component</td>
             <td>AppComponent</td>
@@ -167,7 +211,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/FooterComponent.html">src/app/footer/footer.component.ts</a>
+                        <a href="./components/FooterComponent.html">src/app/footer/footer.component.ts</a>
             </td>
             <td>component</td>
             <td>FooterComponent</td>
@@ -179,7 +223,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/HeaderComponent.html">src/app/header/header.component.ts</a>
+                        <a href="./components/HeaderComponent.html">src/app/header/header.component.ts</a>
             </td>
             <td>component</td>
             <td>HeaderComponent</td>
@@ -191,7 +235,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/HomeComponent.html">src/app/home/home.component.ts</a>
+                        <a href="./components/HomeComponent.html">src/app/home/home.component.ts</a>
             </td>
             <td>component</td>
             <td>HomeComponent</td>
@@ -203,7 +247,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/ListComponent.html">src/app/list/list.component.ts</a>
+                        <a href="./components/ListComponent.html">src/app/list/list.component.ts</a>
             </td>
             <td>component</td>
             <td>ListComponent</td>
@@ -215,7 +259,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/TodoComponent.html">src/app/list/todo/todo.component.ts</a>
+                        <a href="./components/TodoComponent.html">src/app/list/todo/todo.component.ts</a>
             </td>
             <td>component</td>
             <td>TodoComponent</td>
@@ -227,7 +271,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#PIPES_AND_DIRECTIVES">src/app/list/todo/todo.module.ts</a>
+                        <a href="./miscellaneous/variables.html#PIPES_AND_DIRECTIVES">src/app/list/todo/todo.module.ts</a>
             </td>
             <td>variable</td>
             <td>PIPES_AND_DIRECTIVES</td>
@@ -239,7 +283,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/EmptyComponent.html">src/app/shared/components/empty-component.ts</a>
+                        <a href="./components/EmptyComponent.html">src/app/shared/components/empty-component.ts</a>
             </td>
             <td>component</td>
             <td>EmptyComponent</td>
@@ -251,7 +295,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./components/EmptyParentComponent.html">src/app/shared/components/empty-parent-component.ts</a>
+                        <a href="./components/EmptyParentComponent.html">src/app/shared/components/empty-parent-component.ts</a>
             </td>
             <td>component</td>
             <td>EmptyParentComponent</td>
@@ -263,7 +307,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/functions.html#LogClass">src/app/shared/decorators/log.decorator.ts</a>
+                        <a href="./miscellaneous/functions.html#LogClass">src/app/shared/decorators/log.decorator.ts</a>
             </td>
             <td>function</td>
             <td>LogClass</td>
@@ -275,7 +319,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/functions.html#LogMethod">src/app/shared/decorators/log.decorator.ts</a>
+                        <a href="./miscellaneous/functions.html#LogMethod">src/app/shared/decorators/log.decorator.ts</a>
             </td>
             <td>function</td>
             <td>LogMethod</td>
@@ -287,7 +331,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/functions.html#LogProperty">src/app/shared/decorators/log.decorator.ts</a>
+                        <a href="./miscellaneous/functions.html#LogProperty">src/app/shared/decorators/log.decorator.ts</a>
             </td>
             <td>function</td>
             <td>LogProperty</td>
@@ -299,7 +343,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/functions.html#LogPropertyWithArgs">src/app/shared/decorators/log.decorator.ts</a>
+                        <a href="./miscellaneous/functions.html#LogPropertyWithArgs">src/app/shared/decorators/log.decorator.ts</a>
             </td>
             <td>function</td>
             <td>LogPropertyWithArgs</td>
@@ -311,7 +355,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./directives/BorderDirective.html">src/app/shared/directives/border.directive.ts</a>
+                        <a href="./directives/BorderDirective.html">src/app/shared/directives/border.directive.ts</a>
             </td>
             <td>directive</td>
             <td>BorderDirective</td>
@@ -323,7 +367,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./directives/DoNothingDirective.html">src/app/shared/directives/do-nothing.directive.ts</a>
+                        <a href="./directives/DoNothingDirective.html">src/app/shared/directives/do-nothing.directive.ts</a>
             </td>
             <td>directive</td>
             <td>DoNothingDirective</td>
@@ -335,7 +379,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./directives/HighlightAndBorderDirective.html">src/app/shared/directives/highlight-and-border.directive.ts</a>
+                        <a href="./directives/HighlightAndBorderDirective.html">src/app/shared/directives/highlight-and-border.directive.ts</a>
             </td>
             <td>directive</td>
             <td>HighlightAndBorderDirective</td>
@@ -347,7 +391,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./directives/HighlightDirective.html">src/app/shared/directives/highlight.directive.ts</a>
+                        <a href="./directives/HighlightDirective.html">src/app/shared/directives/highlight.directive.ts</a>
             </td>
             <td>directive</td>
             <td>HighlightDirective</td>
@@ -359,7 +403,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./guards/NoopGuard.html">src/app/shared/guards/noopguard.guard.ts</a>
+                        <a href="./guards/NoopGuard.html">src/app/shared/guards/noopguard.guard.ts</a>
             </td>
             <td>guard</td>
             <td>NoopGuard</td>
@@ -371,7 +415,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interceptors/NoopInterceptor.html">src/app/shared/interceptors/noopinterceptor.interceptor.ts</a>
+                        <a href="./interceptors/NoopInterceptor.html">src/app/shared/interceptors/noopinterceptor.interceptor.ts</a>
             </td>
             <td>interceptor</td>
             <td>NoopInterceptor</td>
@@ -383,7 +427,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/ClockInterface.html">src/app/shared/interfaces/clock.interface.ts</a>
+                        <a href="./interfaces/ClockInterface.html">src/app/shared/interfaces/clock.interface.ts</a>
             </td>
             <td>interface</td>
             <td>ClockInterface</td>
@@ -395,7 +439,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/LabelledTodo.html">src/app/shared/interfaces/interfaces.ts</a>
+                        <a href="./interfaces/LabelledTodo.html">src/app/shared/interfaces/interfaces.ts</a>
             </td>
             <td>interface</td>
             <td>LabelledTodo</td>
@@ -407,7 +451,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/SearchFunc.html">src/app/shared/interfaces/interfaces.ts</a>
+                        <a href="./interfaces/SearchFunc.html">src/app/shared/interfaces/interfaces.ts</a>
             </td>
             <td>interface</td>
             <td>SearchFunc</td>
@@ -419,7 +463,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/StringArray.html">src/app/shared/interfaces/interfaces.ts</a>
+                        <a href="./interfaces/StringArray.html">src/app/shared/interfaces/interfaces.ts</a>
             </td>
             <td>interface</td>
             <td>StringArray</td>
@@ -431,7 +475,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/superString.html">src/app/shared/interfaces/interfaces.ts</a>
+                        <a href="./interfaces/superString.html">src/app/shared/interfaces/interfaces.ts</a>
             </td>
             <td>interface</td>
             <td>superString</td>
@@ -443,7 +487,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/TimeInterface.html">src/app/shared/interfaces/time.interface.ts</a>
+                        <a href="./interfaces/TimeInterface.html">src/app/shared/interfaces/time.interface.ts</a>
             </td>
             <td>interface</td>
             <td>TimeInterface</td>
@@ -452,10 +496,58 @@
                 <span class="coverage-count">(2/2)</span>
             </td>
         </tr>
+        <tr class="very-good">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./miscellaneous/typealiases.html#Flags">src/app/shared/miscellaneous/miscellaneous-types.ts</a>
+            </td>
+            <td>type alias</td>
+            <td>Flags</td>
+            <td align="right" data-sort="100">
+                <span class="coverage-percent">100 %</span>
+                <span class="coverage-count">(1/1)</span>
+            </td>
+        </tr>
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./classes/StringIndexedItems.html">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./miscellaneous/typealiases.html#Name">src/app/shared/miscellaneous/miscellaneous-types.ts</a>
+            </td>
+            <td>type alias</td>
+            <td>Name</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./miscellaneous/typealiases.html#NameResolver">src/app/shared/miscellaneous/miscellaneous-types.ts</a>
+            </td>
+            <td>type alias</td>
+            <td>NameResolver</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./miscellaneous/typealiases.html#Something">src/app/shared/miscellaneous/miscellaneous-types.ts</a>
+            </td>
+            <td>type alias</td>
+            <td>Something</td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <!-- miscellaneous -->
+                        <a href="./classes/StringIndexedItems.html">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>class</td>
             <td>StringIndexedItems</td>
@@ -467,7 +559,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./interfaces/InterfaceWithIndexable.html">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./interfaces/InterfaceWithIndexable.html">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>interface</td>
             <td>InterfaceWithIndexable</td>
@@ -479,7 +571,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/functions.html#foo">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./miscellaneous/functions.html#foo">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>function</td>
             <td>foo</td>
@@ -491,7 +583,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#PI">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./miscellaneous/variables.html#PI">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>variable</td>
             <td>PI</td>
@@ -503,7 +595,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#PIT">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./miscellaneous/variables.html#PIT">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>variable</td>
             <td>PIT</td>
@@ -515,7 +607,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#yo">src/app/shared/miscellaneous/miscellaneous.ts</a>
+                        <a href="./miscellaneous/variables.html#yo">src/app/shared/miscellaneous/miscellaneous.ts</a>
             </td>
             <td>variable</td>
             <td>yo</td>
@@ -527,7 +619,7 @@
         <tr class="good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./classes/Todo.html">src/app/shared/models/todo.model.ts</a>
+                        <a href="./classes/Todo.html">src/app/shared/models/todo.model.ts</a>
             </td>
             <td>class</td>
             <td>Todo</td>
@@ -539,7 +631,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./pipes/FirstUpperPipe.html">src/app/shared/pipes/first-upper.pipe.ts</a>
+                        <a href="./pipes/FirstUpperPipe.html">src/app/shared/pipes/first-upper.pipe.ts</a>
             </td>
             <td>pipe</td>
             <td>FirstUpperPipe</td>
@@ -551,7 +643,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./pipes/StandAlonePipe.html">src/app/shared/pipes/standalone.pipe.ts</a>
+                        <a href="./pipes/StandAlonePipe.html">src/app/shared/pipes/standalone.pipe.ts</a>
             </td>
             <td>pipe</td>
             <td>StandAlonePipe</td>
@@ -563,7 +655,7 @@
         <tr class="medium">
             <td>
                 <!-- miscellaneous -->
-                <a href="./injectables/EmitterService.html">src/app/shared/services/emitter.service.ts</a>
+                        <a href="./injectables/EmitterService.html">src/app/shared/services/emitter.service.ts</a>
             </td>
             <td>injectable</td>
             <td>EmitterService</td>
@@ -575,7 +667,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./injectables/EmptyService.html">src/app/shared/services/empty.service.ts</a>
+                        <a href="./injectables/EmptyService.html">src/app/shared/services/empty.service.ts</a>
             </td>
             <td>injectable</td>
             <td>EmptyService</td>
@@ -587,7 +679,7 @@
         <tr class="very-good">
             <td>
                 <!-- miscellaneous -->
-                <a href="./injectables/TodoStore.html">src/app/shared/services/todo.store.ts</a>
+                        <a href="./injectables/TodoStore.html">src/app/shared/services/todo.store.ts</a>
             </td>
             <td>injectable</td>
             <td>TodoStore</td>
@@ -599,7 +691,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#environment">src/environments/environment.prod.ts</a>
+                        <a href="./miscellaneous/variables.html#environment">src/environments/environment.prod.ts</a>
             </td>
             <td>variable</td>
             <td>environment</td>
@@ -611,7 +703,7 @@
         <tr class="low">
             <td>
                 <!-- miscellaneous -->
-                <a href="./miscellaneous/variables.html#environment">src/environments/environment.ts</a>
+                        <a href="./miscellaneous/variables.html#environment">src/environments/environment.ts</a>
             </td>
             <td>variable</td>
             <td>environment</td>
@@ -683,7 +775,6 @@
        <script src="./js/libs/es6-shim.min.js"></script>
        <script src="./js/libs/EventDispatcher.js"></script>
        <script src="./js/libs/promise.min.js"></script>
-       <script src="./js/libs/zepto.min.js"></script>
 
        <script src="./js/compodoc.js"></script>
 

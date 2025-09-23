@@ -13,7 +13,7 @@
     </head>
     <body>
           <script>
-               // Blocking script to avaoid flickering dark mode
+               // Blocking script to avoid flickering dark mode
                // Dark mode toggle button
                var useDark = window.matchMedia('(prefers-color-scheme: dark)');
                var darkModeState = useDark.matches;
@@ -61,10 +61,26 @@
                }
                toggleDarkMode(darkModeState);
           </script>
+          <script>
+              // --- Iframe navigation tracking for Template Playground ---
+              function sendCurrentUrlToParent() {
+                  if (window.parent && window.parent !== window) {
+                      window.parent.postMessage({
+                          type: 'compodoc-iframe-navigate',
+                          url: window.location.pathname + window.location.hash
+                      }, '*');
+                  }
+              }
+              window.addEventListener('hashchange', sendCurrentUrlToParent, false);
+              window.addEventListener('popstate', sendCurrentUrlToParent, false);
+              window.addEventListener('DOMContentLoaded', sendCurrentUrlToParent, false);
+          </script>
 
-        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
-            <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">TodoMVC Angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -73,12 +89,16 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content miscellaneous-variables">
                    <div class="content-data">
+
+
+
+
 
 
 
@@ -110,6 +130,12 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
+                            <a href="#ABOUT_ROUTES" title="src/app/about/about.routes.ts" ><b>ABOUT_ROUTES</b>&nbsp;&nbsp;&nbsp;(src/.../about.routes.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#APP_ROUTES" title="src/app/app-routing.module.ts" ><b>APP_ROUTES</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                        </li>
+                        <li>
                             <a href="#environment" title="src/environments/environment.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
@@ -134,6 +160,88 @@
     </table>
 </section>
 
+    <h3>src/app/about/about.routes.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ABOUT_ROUTES"></a>
+                    <span class="name">
+                        <span ><b>ABOUT_ROUTES</b></span>
+                        <a href="#ABOUT_ROUTES"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Routes</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+        path: &#x27;&#x27;, component: AboutComponent,
+        children: [
+            { path: &#x27;&#x27;, redirectTo: &#x27;todomvc&#x27;, pathMatch: &#x27;full&#x27; },
+            { path: &#x27;todomvc&#x27;, component: TodoMVCComponent },
+            { path: &#x27;compodoc&#x27;, component: CompodocComponent }
+        ]
+    }
+]</code>
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>About Routing module</p>
+<p>Exposing just two routes, one for Compodoc, the other one for TodoMVC</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/app-routing.module.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="APP_ROUTES"></a>
+                    <span class="name">
+                        <span ><b>APP_ROUTES</b></span>
+                        <a href="#APP_ROUTES"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Routes</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+        path: &#x27;about&#x27;,
+        loadChildren: () &#x3D;&gt; &quot;import(&#x27;./about/about.module&#x27;).then((m) &#x3D;&gt; m.AboutModule)&quot;,
+    },
+    //{ path: &#x27;about&#x27;, loadChildren: &#x27;./about/about.module#AboutModule&#x27; },
+    { path: &#x27;&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; },
+    { path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27; },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section data-compodoc="block-properties">
     <h3></h3>    <table class="table table-sm table-bordered">
@@ -377,7 +485,6 @@ See <a href="../classes/Todo.html">Todo</a> for service using it</p>
        <script src="../js/libs/es6-shim.min.js"></script>
        <script src="../js/libs/EventDispatcher.js"></script>
        <script src="../js/libs/promise.min.js"></script>
-       <script src="../js/libs/zepto.min.js"></script>
 
        <script src="../js/compodoc.js"></script>
 
