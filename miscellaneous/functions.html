@@ -84,7 +84,14 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+    <button type="button"
+        class="search-input-clear"
+        aria-label="Clear search"
+        data-search-input-clear>&times;</button>
+</div>
+            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -130,19 +137,19 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#foo" title="src/app/shared/miscellaneous/miscellaneous.ts" ><b>foo</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous.ts)</a>
+                            <a href="#foo" title="src/app/shared/miscellaneous/miscellaneous.ts" class="reference-link "><span class="reference-badge reference-badge--function" aria-hidden="true">F</span><span class="reference-link-label"><b>foo</b>&nbsp;&nbsp;&nbsp;(src/.../miscellaneous.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#LogClass" title="src/app/shared/decorators/log.decorator.ts" ><b>LogClass</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogClass" title="src/app/shared/decorators/log.decorator.ts" class="reference-link "><span class="reference-badge reference-badge--function" aria-hidden="true">F</span><span class="reference-link-label"><b>LogClass</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#LogMethod" title="src/app/shared/decorators/log.decorator.ts" ><b>LogMethod</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogMethod" title="src/app/shared/decorators/log.decorator.ts" class="reference-link "><span class="reference-badge reference-badge--function" aria-hidden="true">F</span><span class="reference-link-label"><b>LogMethod</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#LogProperty" title="src/app/shared/decorators/log.decorator.ts" ><b>LogProperty</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogProperty" title="src/app/shared/decorators/log.decorator.ts" class="reference-link "><span class="reference-badge reference-badge--function" aria-hidden="true">F</span><span class="reference-link-label"><b>LogProperty</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#LogPropertyWithArgs" title="src/app/shared/decorators/log.decorator.ts" ><b>LogPropertyWithArgs</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</a>
+                            <a href="#LogPropertyWithArgs" title="src/app/shared/decorators/log.decorator.ts" class="reference-link "><span class="reference-badge reference-badge--function" aria-hidden="true">F</span><span class="reference-link-label"><b>LogPropertyWithArgs</b>&nbsp;&nbsp;&nbsp;(src/.../log.decorator.ts)</span></a>
                         </li>
                     </ul>
                 </td>
@@ -214,7 +221,8 @@
             </tr>
         </tbody>
     </table>
-</section>    <h3>src/app/shared/decorators/log.decorator.ts</h3>
+</section>
+    <h3>src/app/shared/decorators/log.decorator.ts</h3>
     <section data-compodoc="block-methods">
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -466,6 +474,7 @@
 </section>
 
 
+
                    </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -498,6 +507,24 @@
 
        <script>
                $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var updateDarkModeSwitchOffset = function () {
+                    var content = document.querySelector('.content');
+                    var scrollbarWidth = 0;
+
+                    if (content) {
+                         scrollbarWidth = Math.max(0, content.offsetWidth - content.clientWidth);
+                    }
+
+                    document.documentElement.style.setProperty(
+                         '--content-scrollbar-width',
+                         scrollbarWidth + 'px'
+                    );
+               };
+
+               updateDarkModeSwitchOffset();
+               requestAnimationFrame(updateDarkModeSwitchOffset);
+               window.addEventListener('resize', updateDarkModeSwitchOffset);
+
                checkToggle(darkModeState);
                if ($darkModeToggleSwitchers.length > 0) {
                     for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
@@ -513,7 +540,6 @@
        <script src="../js/libs/lit-html.js"></script>
 
        <script src="../js/menu-wc.js" defer></script>
-       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

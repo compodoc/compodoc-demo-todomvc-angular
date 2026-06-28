@@ -100,7 +100,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content package-dependencies">
+               <div class="content architecture">
                    <div class="content-data">
 
 
@@ -108,82 +108,54 @@
 
 
 
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Architecture</li>
+</ol>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">Dependencies</li>
-    </ol>
-    <div class="dependencies-table-wrapper">
-        <table class="table table-sm table-bordered dependencies-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Version</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>@angular/common</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/compiler</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/core</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/forms</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/platform-browser</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/platform-browser-dynamic</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>@angular/router</b></td>
-                    <td>^22.0.4</td>
-                </tr>
-                <tr>
-                    <td><b>rxjs</b></td>
-                    <td>~7.8.2</td>
-                </tr>
-                <tr>
-                    <td><b>todomvc-app-css</b></td>
-                    <td>^2.4.3</td>
-                </tr>
-                <tr>
-                    <td><b>todomvc-common</b></td>
-                    <td>^1.0.5</td>
-                </tr>
-                <tr>
-                    <td><b>tslib</b></td>
-                    <td>^2.8.1</td>
-                </tr>
-                <tr>
-                    <td><b>zone.js</b></td>
-                    <td>~0.16.2</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="architecture-legend">
+        <button type="button" class="architecture-legend-item" data-architecture-filter="component" aria-pressed="true">
+            <span class="architecture-legend-color architecture-component"></span>Component
+        </button>
+        <button type="button" class="architecture-legend-item" data-architecture-filter="directive" aria-pressed="true">
+            <span class="architecture-legend-color architecture-directive"></span>Directive
+        </button>
+        <button type="button" class="architecture-legend-item" data-architecture-filter="pipe" aria-pressed="true">
+            <span class="architecture-legend-color architecture-pipe"></span>Pipe
+        </button>
+        <button type="button" class="architecture-legend-item" data-architecture-filter="module" aria-pressed="true">
+            <span class="architecture-legend-color architecture-module"></span>Module
+        </button>
+        <button type="button" class="architecture-legend-item" data-architecture-filter="injectable" aria-pressed="true">
+            <span class="architecture-legend-color architecture-injectable"></span>Injectable
+        </button>
     </div>
+
+    <div class="text-center module-graph-container architecture-graph-wrapper">
+        <div id="architecture-graph"></div>
+        <div class="btn-group size-buttons">
+            <button id="architecture-zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+            <button id="architecture-reset" class="btn btn-default btn-sm">Reset</button>
+            <button id="architecture-zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+        </div>
+    </div>
+
+    <script>
+        var ARCHITECTURE_DEP_GRAPH = {"nodes":[{"id":"module:AboutModule","name":"AboutModule","type":"module","url":"./modules/AboutModule.html"},{"id":"component:AboutComponent","name":"AboutComponent","type":"component","url":"./components/AboutComponent.html"},{"id":"component:CompodocComponent","name":"CompodocComponent","type":"component","url":"./components/CompodocComponent.html"},{"id":"component:TodoMVCComponent","name":"TodoMVCComponent","type":"component","url":"./components/TodoMVCComponent.html"},{"id":"module:AppModule","name":"AppModule","type":"module","url":"./modules/AppModule.html"},{"id":"module:AppRoutingModule","name":"AppRoutingModule","type":"module","url":"./modules/AppRoutingModule.html"},{"id":"module:HomeModule","name":"HomeModule","type":"module","url":"./modules/HomeModule.html"},{"id":"component:AppComponent","name":"AppComponent","type":"component","url":"./components/AppComponent.html"},{"id":"injectable:TodoStore","name":"TodoStore","type":"injectable","url":"./injectables/TodoStore.html"},{"id":"module:FooterModule","name":"FooterModule","type":"module","url":"./modules/FooterModule.html"},{"id":"component:FooterComponent","name":"FooterComponent","type":"component","url":"./components/FooterComponent.html"},{"id":"module:HeaderModule","name":"HeaderModule","type":"module","url":"./modules/HeaderModule.html"},{"id":"component:HeaderComponent","name":"HeaderComponent","type":"component","url":"./components/HeaderComponent.html"},{"id":"module:HomeRoutingModule","name":"HomeRoutingModule","type":"module","url":"./modules/HomeRoutingModule.html"},{"id":"module:ListModule","name":"ListModule","type":"module","url":"./modules/ListModule.html"},{"id":"component:HomeComponent","name":"HomeComponent","type":"component","url":"./components/HomeComponent.html"},{"id":"component:TodoComponent","name":"TodoComponent","type":"component","url":"./components/TodoComponent.html"},{"id":"component:ListComponent","name":"ListComponent","type":"component","url":"./components/ListComponent.html"},{"id":"module:TodoModule","name":"TodoModule","type":"module","url":"./modules/TodoModule.html"},{"id":"pipe:FirstUpperPipe","name":"FirstUpperPipe","type":"pipe","url":"./pipes/FirstUpperPipe.html"},{"id":"injectable:EmptyService","name":"EmptyService","type":"injectable","url":"./injectables/EmptyService.html"},{"id":"directive:DoNothingDirective","name":"DoNothingDirective","type":"directive","url":"./directives/DoNothingDirective.html"}],"edges":[{"source":"module:AboutModule","target":"component:AboutComponent"},{"source":"module:AboutModule","target":"component:CompodocComponent"},{"source":"module:AboutModule","target":"component:TodoMVCComponent"},{"source":"module:AppModule","target":"module:AppRoutingModule"},{"source":"module:AppModule","target":"module:HomeModule"},{"source":"module:AppModule","target":"component:AppComponent"},{"source":"module:AppModule","target":"injectable:TodoStore"},{"source":"module:FooterModule","target":"component:FooterComponent"},{"source":"module:HeaderModule","target":"component:HeaderComponent"},{"source":"module:HomeModule","target":"module:FooterModule"},{"source":"module:HomeModule","target":"module:HeaderModule"},{"source":"module:HomeModule","target":"module:HomeRoutingModule"},{"source":"module:HomeModule","target":"module:ListModule"},{"source":"module:HomeModule","target":"component:HomeComponent"},{"source":"module:ListModule","target":"component:TodoComponent"},{"source":"module:ListModule","target":"component:ListComponent"},{"source":"module:TodoModule","target":"pipe:FirstUpperPipe"},{"source":"component:AboutComponent","target":"injectable:EmptyService"},{"source":"component:TodoComponent","target":"directive:DoNothingDirective"}]};
+    </script>
+    <script src="./js/libs/vis-network.min.js"></script>
+    <script src="./js/architecture-graph.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,8 +188,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'package-dependencies';
-            var COMPODOC_CURRENT_PAGE_URL = 'dependencies.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'architecture';
+            var COMPODOC_CURRENT_PAGE_URL = 'architecture.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

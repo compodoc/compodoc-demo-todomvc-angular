@@ -84,7 +84,14 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+    <button type="button"
+        class="search-input-clear"
+        aria-label="Clear search"
+        data-search-input-clear>&times;</button>
+</div>
+            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -106,6 +113,11 @@
     <li class="breadcrumb-item">Modules</li>
     <li class="breadcrumb-item" >ListModule</li>
 </ol>
+
+<div class="io-file io-file-path" data-compodoc="entity-file-path">
+    <span class="icon ion-ios-document" aria-hidden="true"></span>
+    <code>src/app/list/list.module.ts</code>
+</div>
 
 <div class="text-center module-graph-container">
     <div id="module-graph-svg">
@@ -148,17 +160,17 @@
 <polygon fill="none" stroke="black" points="121,-78 121,-130 241,-130 241,-78 121,-78"/>
 </g>
 <!-- ListComponent -->
-<g id="node1" class="node">
+<g id="node1" class="node"><a xlink:href="../components/ListComponent.html" href="../components/ListComponent.html" target="_top">
 <title>ListComponent</title>
 <polygon fill="#ffffb3" stroke="black" points="232.61,-122 129.39,-122 129.39,-86 232.61,-86 232.61,-122"/>
 <text text-anchor="middle" x="181" y="-99.8" font-family="Times,serif" font-size="14.00">ListComponent</text>
-</g>
+</a></g>
 <!-- ListModule -->
-<g id="node2" class="node">
+<g id="node2" class="node"><a xlink:href="../modules/ListModule.html" href="../modules/ListModule.html" target="_top">
 <title>ListModule</title>
 <polygon fill="#8dd3c7" stroke="black" points="287.83,-187 284.83,-191 263.83,-191 260.83,-187 206.17,-187 206.17,-151 287.83,-151 287.83,-187"/>
 <text text-anchor="middle" x="247" y="-164.8" font-family="Times,serif" font-size="14.00">ListModule</text>
-</g>
+</a></g>
 <!-- ListComponent&#45;&gt;ListModule -->
 <g id="edge1" class="edge">
 <title>ListComponent&#45;&gt;ListModule</title>
@@ -166,11 +178,11 @@
 <polygon fill="black" stroke="black" points="215.95,-140.99 219.45,-150.99 222.95,-140.99 215.95,-140.99"/>
 </g>
 <!-- ListComponent  -->
-<g id="node4" class="node">
+<g id="node4" class="node"><a xlink:href="../components/ListComponent.html" href="../components/ListComponent.html" target="_top">
 <title>ListComponent </title>
 <polygon fill="#fb8072" stroke="black" points="300.11,-252 193.89,-252 193.89,-216 300.11,-216 300.11,-252"/>
 <text text-anchor="middle" x="247" y="-229.8" font-family="Times,serif" font-size="14.00">ListComponent </text>
-</g>
+</a></g>
 <!-- ListModule&#45;&gt;ListComponent  -->
 <g id="edge3" class="edge">
 <title>ListModule&#45;&gt;ListComponent </title>
@@ -178,11 +190,11 @@
 <polygon fill="black" stroke="black" points="243.5,-205.99 247,-215.99 250.5,-205.99 243.5,-205.99"/>
 </g>
 <!-- TodoComponent -->
-<g id="node3" class="node">
+<g id="node3" class="node"><a xlink:href="../components/TodoComponent.html" href="../components/TodoComponent.html" target="_top">
 <title>TodoComponent</title>
 <polygon fill="#8dd3c7" stroke="black" points="367.39,-122 364.39,-126 343.39,-126 340.39,-122 256.61,-122 256.61,-86 367.39,-86 367.39,-122"/>
 <text text-anchor="middle" x="312" y="-99.8" font-family="Times,serif" font-size="14.00">TodoComponent</text>
-</g>
+</a></g>
 <!-- TodoComponent&#45;&gt;ListModule -->
 <g id="edge2" class="edge">
 <title>TodoComponent&#45;&gt;ListModule</title>
@@ -221,13 +233,6 @@
 <div class="tab-content">
     <div class="tab-pane fade active in" id="info">
 
-        <p class="comment">
-            <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/app/list/list.module.ts</code>
-        </p>
-
 
 
         <p class="comment">
@@ -238,24 +243,12 @@
 <p>Contains list component which can filter types of todos :</p>
 <table class="table table-bordered compodoc-table">
 <thead>
-<tr>
-<th>Type</th>
-<th>API</th>
-</tr>
+<tr><th>Type</th><th>API</th></tr>
 </thead>
 <tbody>
-<tr>
-<td>completed</td>
-<td>displayCompleted</td>
-</tr>
-<tr>
-<td>all</td>
-<td>displayAll</td>
-</tr>
-<tr>
-<td>remaining</td>
-<td>displayRemaining</td>
-</tr>
+<tr><td>completed</td><td>displayCompleted</td></tr>
+<tr><td>all</td><td>displayAll</td></tr>
+<tr><td>remaining</td><td>displayRemaining</td></tr>
 </tbody>
 </table>
 
@@ -295,6 +288,33 @@
                 </div>
             </div>
         </div>
+
+                <section data-compodoc="block-relationships">
+            <h3>Relationships</h3>
+
+            <div class="row pt-3">
+                <div class="col-sm-6">
+                    <h4>Used by</h4>
+                        <ul class="list-unstyled relationships-list">
+                                <li>
+                                            <code><a href="../modules/HomeModule.html" target="_self" >HomeModule</a></code>
+                                </li>
+                        </ul>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4>Depends on</h4>
+                        <ul class="list-unstyled relationships-list">
+                                <li>
+                                            <code><a href="../components/TodoComponent.html" target="_self" >TodoComponent</a></code>
+                                </li>
+                                <li>
+                                            <code><a href="../components/ListComponent.html" target="_self" >ListComponent</a></code>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
 
 
     </div>
@@ -351,6 +371,7 @@ export class ListModule {}
 
 
 
+
                    </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
@@ -383,6 +404,24 @@ export class ListModule {}
 
        <script>
                $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var updateDarkModeSwitchOffset = function () {
+                    var content = document.querySelector('.content');
+                    var scrollbarWidth = 0;
+
+                    if (content) {
+                         scrollbarWidth = Math.max(0, content.offsetWidth - content.clientWidth);
+                    }
+
+                    document.documentElement.style.setProperty(
+                         '--content-scrollbar-width',
+                         scrollbarWidth + 'px'
+                    );
+               };
+
+               updateDarkModeSwitchOffset();
+               requestAnimationFrame(updateDarkModeSwitchOffset);
+               window.addEventListener('resize', updateDarkModeSwitchOffset);
+
                checkToggle(darkModeState);
                if ($darkModeToggleSwitchers.length > 0) {
                     for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
@@ -398,7 +437,6 @@ export class ListModule {}
        <script src="../js/libs/lit-html.js"></script>
 
        <script src="../js/menu-wc.js" defer></script>
-       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

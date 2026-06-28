@@ -84,7 +84,14 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+    <button type="button"
+        class="search-input-clear"
+        aria-label="Clear search"
+        data-search-input-clear>&times;</button>
+</div>
+            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -130,16 +137,16 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#APP_ENUM" title="src/app/app-routing.module.ts" ><b>APP_ENUM</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                            <a href="#APP_ENUM" title="src/app/app-routing.module.ts" class="reference-link "><span class="reference-badge reference-badge--enum" aria-hidden="true">E</span><span class="reference-link-label"><b>APP_ENUM</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#APP_ENUMS" title="src/app/app-routes.enum.ts" ><b>APP_ENUMS</b>&nbsp;&nbsp;&nbsp;(src/.../app-routes.enum.ts)</a>
+                            <a href="#APP_ENUMS" title="src/app/app-routes.enum.ts" class="reference-link "><span class="reference-badge reference-badge--enum" aria-hidden="true">E</span><span class="reference-link-label"><b>APP_ENUMS</b>&nbsp;&nbsp;&nbsp;(src/.../app-routes.enum.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#Direction" title="src/app/shared/enums/enum.ts" ><b>Direction</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
+                            <a href="#Direction" title="src/app/shared/enums/enum.ts" class="reference-link "><span class="reference-badge reference-badge--enum" aria-hidden="true">E</span><span class="reference-link-label"><b>Direction</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</span></a>
                         </li>
                         <li>
-                            <a href="#PopupEffect" title="src/app/shared/enums/enum.ts" ><b>PopupEffect</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</a>
+                            <a href="#PopupEffect" title="src/app/shared/enums/enum.ts" class="reference-link "><span class="reference-badge reference-badge--enum" aria-hidden="true">E</span><span class="reference-link-label"><b>PopupEffect</b>&nbsp;&nbsp;&nbsp;(src/.../enum.ts)</span></a>
                         </li>
                     </ul>
                 </td>
@@ -298,6 +305,24 @@
 
        <script>
                $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var updateDarkModeSwitchOffset = function () {
+                    var content = document.querySelector('.content');
+                    var scrollbarWidth = 0;
+
+                    if (content) {
+                         scrollbarWidth = Math.max(0, content.offsetWidth - content.clientWidth);
+                    }
+
+                    document.documentElement.style.setProperty(
+                         '--content-scrollbar-width',
+                         scrollbarWidth + 'px'
+                    );
+               };
+
+               updateDarkModeSwitchOffset();
+               requestAnimationFrame(updateDarkModeSwitchOffset);
+               window.addEventListener('resize', updateDarkModeSwitchOffset);
+
                checkToggle(darkModeState);
                if ($darkModeToggleSwitchers.length > 0) {
                     for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
@@ -313,7 +338,6 @@
        <script src="../js/libs/lit-html.js"></script>
 
        <script src="../js/menu-wc.js" defer></script>
-       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
